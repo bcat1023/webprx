@@ -4,5 +4,8 @@
     "keywords" : ["util", "proxy", "server"],
     "author" : "bcat1023",
     "main" : "/server.js",
-    "version" : "0.0.1"
+    "version" : "0.0.1",
+    "dependencies": {
+      "request": "2.88.2"
+    }
   }
