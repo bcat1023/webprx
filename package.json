@@ -1,0 +1,8 @@
+{
+    "name" : "webprx",
+    "description" : "JavaScript's functional programming helper library.",
+    "keywords" : ["util", "proxy", "server",],
+    "author" : "bcat1023",
+    "main" : "server.js",
+    "version" : "0.0.1"
+  }

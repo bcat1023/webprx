@@ -15,6 +15,6 @@ function onRequest(req, res) {
         }).pipe(res);
     }
     else {
-        res.end("no url found");
+        res.end("No url found, 404, Check the url.");
     }
 }
