@@ -3,7 +3,7 @@ var http = require('http');
 var url = require('url');
 var request = require('request');
 
-http.createServer(onRequest).listen(3001, `loguchat.herokuapp.com`);
+http.createServer(onRequest).listen(3001);
 console.log(`Http Server Online`);
 console.log(`Listing On localhost:3000`)
 function onRequest(req, res) {
