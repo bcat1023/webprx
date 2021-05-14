@@ -89,13 +89,7 @@ html body {
 	</div>
 
 </div>
-	<div style="text-align:center;">
-		<h2 style="color:blue;">Websites that can be unblocked include the following : </h2>
-		<h3 style="color:green;">Youtube</h3>
-		<h3 style="color:green;">Reddit</h3>
-		<h3 style="color:green;">Twitter</h3>
-		<h3 style="color:green;">And many more!</h3>
-	    </div
+	
 <div id="footer">
 	Powered by <a href="#" target="_blank">Titan Network</a>
 </div>
