@@ -25,7 +25,7 @@ body{
   margin:0;
   background-color: white;
   color:var(--textcolor);
-  background-image:url('https://i.pinimg.com/originals/06/28/f6/0628f61d400299bef9da7ba31203024e.gif');
+  background-image:url('https://th.bing.com/th/id/OIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK?pid=ImgDet&rs=1');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -163,6 +163,8 @@ body {
     -webkit-border-radius: .9em;
     -moz-border-radius: .9em;
     border-radius: .9em;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     overflow:hidden;
 
 }
@@ -204,6 +206,8 @@ body {
     -webkit-border-radius: .9em;
     -moz-border-radius: .9em;
     border-radius: .9em;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 .d-box h1 {
@@ -244,7 +248,7 @@ cctb {
 .selbuttons {border:none;border-radius: 5px;padding:10px;width:48px;background:var(--main-color);;color:#fff;font-weight:bold;}
 .selbuttonsbigger {border:none;border-radius: 5px;padding:10px;width:55px;background:var(--main-color);;color:#fff;font-weight:bold;}
 
-/*tabbed browsing portion
+/*tabbed browsing portion*/
 
 .tabcontent {
   animation: fadeEffect 1s; /* Fading effect takes 1 second */
