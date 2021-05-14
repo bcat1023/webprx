@@ -59,7 +59,7 @@ html body {
 	<div style="text-align:center;">
 		<h1 style="color:purple;">Titan Network Proxy</h1>
     <h1 style="color:purple;">Fallback Page</h1>
-		<h3 style="color:blue;">ALERT: Titan Networks Is Down, Here Is A Fall Back Page So You Can Keep Going</h3>
+		<h3 style="color:blue;">NOTICE: An internal network failed had occurred. Please try again</h3>
 	</div>
 
 	<?php if(isset($error_msg)){ ?>
@@ -69,12 +69,12 @@ html body {
 	</div>
 
 	<?php } ?>
-
+<!--
 	<div id="frm">
-
+	-->
 	<!-- I wouldn't touch this part -->
 
-		<form action="index.php" method="post" style="margin-bottom:0;">
+		<!--<form action="index.php" method="post" style="margin-bottom:0;">
 			<input name="url" type="text" style="width:400px;" autocomplete="off" placeholder="http://" />
 			<input type="submit" value="Go" />
 		</form>
@@ -82,7 +82,8 @@ html body {
 		<script type="text/javascript">
 			document.getElementsByName("url")[0].focus();
 		</script>
-
+	--><center>
+	<a style="background-color: white;padding: 5px;border-radius: 5px;" href="/">Home</a></center>
 	<!-- [END] -->
 
 	</div>
