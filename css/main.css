@@ -10,9 +10,9 @@ body:before {
 
 /* USE THIS TO CHANGE COLOR SCHEME*/
 :root {
-    --main-color:darkorange;
+    --main-color:darkred;
     --secondary-color:black;
-    --hovercolor:orange;
+    --hovercolor:red;
     --textcolor:white;
     --borders:white;
   }
@@ -25,7 +25,7 @@ body{
   margin:0;
   background-color: white;
   color:var(--textcolor);
-  background-image:url('https://cdn.discordapp.com/attachments/708459350649340034/709192289779580988/thumb-1920-1029784.png');
+  background-image:url('http://s1.picswalls.com/thumbs2/2017/12/11/awesome-nature-wallpaper_104529494_313.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
