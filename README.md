@@ -1,97 +1,51 @@
-# proxy-to-proxy-https
-An http proxy that acts as man in the middle between a browser and a corporate proxy in nodeJS 
+# TitaniumLite
 
-Do not hesitate to publish an issue for any question or problem
+A simple and lightweight web-proxy site built to be easy to use and modify for everyone.
 
-(inspired by https://newspaint.wordpress.com/2012/11/05/node-js-http-and-https-proxy/ )
+Initial Release Date: 05/11/2020.
+#### Basic info
 
-You will need nodeJS installed with "pac-resolver" and 'https-proxy-agent' npm packaged installed. (beware : pac-resolver has some issue with dns error handling). 
+This web-app, measuring about 15 MB, is designed to be as light on server storage as possible.
 
-##usage : 
+# Features
 
-* -l : login for corporate http proxy authentification
-* -pass : password for corporate http proxy authentification
-* -p : port to listen to
-* -P : url to get the proxy.pac configuration.
-* -https : optional attribute to decode https messages.
-* -cert : certificate chain for https decoding
-* -certKey : key for re encoding message to external proxy or website
+#### Locally Stored and Hosted Proxy Server
 
+This allows your site to have a proxy already equipped when you deploy it so you can quickly get to circumventing censorship!
 
+#### Games
 
-If you do not have an url to get a script for proxy configuration, you can run pacserver.js. It will run 2 servers : 
-* server at localhost:8083 delivers a script to use an http proxy at localhost:8084. 
-* server at localhost:8082 delivers a script to always bypass a proxy ( DIRECT ) 
+This site includes several games out of the box.
 
+#### Setup Instructions:
 
-```sh
-$ nodejs pacservers.js&
-Server proxy running at 8083
-Server direct running at 8082
-```
+***You need to fork this repository; Please do not just deploy it directly to Heroku.***
 
+You want to have Cloudflare or a similar DNS provider on your domain.
 
-Here, as an example, I run a first instance of my webproxy2.js in order to target a second http proxy running at localhost:8084.
-You can see in the http request header that there is no information of login/password. These informations are added on the fly before forwarding the request to the second http proxy.
+Getting started:
 
-```sh
-nodejs webproxy2.js -l myLogin -pass myPassword -p 8080  -P http://localhost:8083 -d  -https 
-webproxy server listening on port 8080
-TCP server accepting connection on port: 8080
-FindProxyForURL OK for http://localhost:8083
-TCP server accepting connection on port: 8081
-GET http://www.20minutes.fr/ HTTP/1.1
+Fork/Download this repository
 
-{
-    "user-agent": "Wget/1.17.1 (linux-gnu)",
-    "accept": "*/*",
-    "accept-encoding": "identity",
-    "host": "www.20minutes.fr",
-    "connection": "Keep-Alive",
-    "proxy-connection": "Keep-Alive"
-}
-HTTP/1.1 200 OK
+Pick a hosting service; I recommend Heroku, Nodeclusters, AWS, OVH, and Servercheap for this.
 
-{
-    "date": "Wed, 26 Oct 2016 21:01:49 GMT",
-    "server": "Apache",
-    "cache-control": "public, max-age=30, s-maxage=30",
-[...]
-```
+Extract the files, or hook it up to your Github (depends who you choose).
 
+Make sure it's all good and working, if so, change all the cosmetic tidbits on the site so it's ready to be used.
 
+Move onto Node Unblocker
 
-Then, I launch a second proxy running at localhost:8084 configured for a direct connection : 
+Node Unblocker setup:
 
-```sh
-$nodejs webproxy2.js -p 8084 -l myLogin -pass myPassword -P http://localhost:8082 -d -https -cert fullchain.pem -certKey key-letsencrypt.pem 
-webproxy server listening on port 8084
-TCP server accepting connection on port: 8084
-FindProxyForURL OK for http://localhost:8082
-TCP server accepting connection on port: 8085
-GET http://www.20minutes.fr/ HTTP/1.1
+Configure a Node Unblocker server, by following the instructions found at https://github.com/nfriedly/nodeunblocker.com
 
-{
-    "user-agent": "Wget/1.17.1 (linux-gnu)",
-    "accept": "*/*",
-    "accept-encoding": "identity",
-    "host": "www.20minutes.fr",
-    "connection": "Keep-Alive",
-    "proxy-connection": "Keep-Alive",
-    "proxy-authorization": "Basic dW5kZWZpbmVkOnVuZGVmaW5lZA=="
-}
-HTTP/1.1 200 OK
-[...]
-```
+Attach the IP/CNAME of the Node Unblocker server to your site's domain, with the subdomain "node".
 
-You can notice that "proxy-authorization" header is now present. Since the connection to the target url is now 'DIRECT', the "proxy-authorization" header is removed before the sending to the endpoint.
+Done, you now have a local Node server.
 
-###example of client script
+***Please add your own Terms of Service and Privacy Policy.***
 
-```sh
-export https_proxy=http://localhost:8080
-export http_proxy=http://localhost:8080
+***Please edit the example portions of this site so you have a complete mirror.***
 
-wget http://www.20minutes.fr
-wget https://www.leboncoin.fr --no-check-certificate -d
-```
+#
+Property of TitaniumNetwork. Users have full permission to duplicate and modify as much/long as their hearts desire, as long as credit is given to TitaniumNetwork.
