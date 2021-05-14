@@ -77,7 +77,7 @@
       <form action="./geographic/index.php" id="web-search-box" method="post" style="transform:scale(1.1)">
       <p>
         <input type="text" placeholder="Enter URL" style="border:none;border-radius: 5px;padding:10px;" id="url" autocomplete="false" name="url" />&nbsp;<p></p>
-        <input type="button" id="localnode" class="selbuttonsbigger" value="Node" />
+        <input type="button" onclick="javascript:(alert(`The node server is currently Offline`))" id="localnode" class="selbuttonsbigger" value="Node" />
         <input type="submit" class="selbuttons" value="PHP" />
         <script>
 var host=location.hostname.split('.'),
@@ -88,11 +88,11 @@ if(host.length==3){
 }
 var nde=document.getElementById('localnode'),
     url=document.getElementById('url');
-
+/*
 nde.addEventListener('click',()=>{
   window.location.href = "https://node."+purl+"/textbooks/" + url.value;
 });
-
+Distabled cuz node is offline*/
 window.addEventListener('load', ()=>{
   url.focus();
 });
