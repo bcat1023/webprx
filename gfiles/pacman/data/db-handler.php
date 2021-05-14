@@ -18,9 +18,6 @@ if (isset($_POST['action'])) {
 			if(isset($_POST['name']) || isset($_POST['score']) || isset($_POST['level'])) 
 				echo addHighscore($_POST['name'],$_POST['score'], $_POST['level']);
 			break;
-		case 'reset':
-			echo resetHighscore();
-			break;
 		}
 } else if (isset($_GET['action'])) {
 	if ($_GET['action'] == 'get') {
@@ -29,9 +26,25 @@ if (isset($_POST['action'])) {
 		} else {
 			echo getHighscore();
 		}
+	} else if ($_GET['action'] == 'version') {
+		echo getVersionInfo();
 	}
 } else echo "define action to call";
 
+
+function getVersionInfo() {
+	$strJsonFileContents = file_get_contents("../package.json");
+	// Convert to array 
+	$array = json_decode($strJsonFileContents, true);
+	
+	$response["version"] = $array["version"];
+
+	if (!isset($response) || is_null($response)) {
+		return "[]";
+	} else {
+		return json_encode($response);
+	}
+}
 
 function getHighscore($page = 1) {
 
@@ -71,10 +84,12 @@ function addHighscore($name, $score, $level) {
 	$maxlvlpoints_pills = 104 * 10;
 	$maxlvlpoints_powerpills = 4 * 50;
 	$maxlvlpoints_ghosts = 4 * 4 * 100;
+	$maxlvlpoints = $maxlvlpoints_pills + $maxlvlpoints_powerpills + $maxlvlpoints_ghosts;
+
 	// check if score is even possible
-	if ($level < 1) {
+	if ($level < 1 || $level > 10) {
 		$cheater = 1;
-	} else if (($score / $level) > (1600 + 1240)) {
+	} else if (($score / $level) > $maxlvlpoints) {
 		$cheater = 1;
 	}
 
@@ -101,13 +116,6 @@ function addHighscore($name, $score, $level) {
 	$response['score'] = $score;
 	$response['cheater'] = $cheater;
 	return json_encode($response);
-}
-
-function resetHighscore() {
-	$db = new SQLite3('pacman.db');
-	$date = date('Y-m-d h:i:s', time());
-	$db->exec('DROP TABLE IF EXISTS highscore');
-	createDataBase($db);
 }
 
 function createDataBase($db) {
