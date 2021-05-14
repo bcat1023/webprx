@@ -1,6 +1,6 @@
 <style>img[alt*="www.000webhost.com"] {
     display: none;}
-code made by Titanumnetwork,
+code made by Titan Networks,
 img[alt="www.000webhost.com"]{display:none;}
 </style>
 <html>
@@ -8,7 +8,7 @@ img[alt="www.000webhost.com"]{display:none;}
 <html>
 <head>
 <body style="background-color:black;">
-<title>TitaniumNetwork Proxy</title>
+<title>Titan Networks Proxy</title>
 
 <meta name="generator" content="php-proxy.com">
 <meta name="version" content="<?=$version;?>">
@@ -57,10 +57,9 @@ html body {
 <div id="container">
 
 	<div style="text-align:center;">
-		<h1 style="color:purple;">Titanium Network Proxy</h1>
+		<h1 style="color:purple;">Titan Network Proxy</h1>
     <h1 style="color:purple;">Fallback Page</h1>
-                <h1 style="color:green;">Local PHP-Proxy</h1>
-		<h3 style="color:blue;">Using the titaniumnetwork proxy will allow you to anonymously visit any site you wish. Due to its anonymous nature, you can even unblock websites that are blocked by school and work firewalls!</h3>
+		<h3 style="color:blue;">ALERT: Titan Networks Is Down, Here Is A Fall Back Page So You Can Keep Going</h3>
 	</div>
 
 	<?php if(isset($error_msg)){ ?>
@@ -94,12 +93,10 @@ html body {
 		<h3 style="color:green;">Youtube</h3>
 		<h3 style="color:green;">Reddit</h3>
 		<h3 style="color:green;">Twitter</h3>
-		<h3 style="color:green;">Dailymotion</h3>
-		<h3 style="color:green;">Liveleaks</h3>
 		<h3 style="color:green;">And many more!</h3>
 	    </div
 <div id="footer">
-	Powered by <a href="#" target="_blank">TitaniumNetwork</a>
+	Powered by <a href="#" target="_blank">Titan Network</a>
 </div>
 
 
