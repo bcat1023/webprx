@@ -191,23 +191,23 @@ body {
 .c-box a {color:white;}
 
 .d-box {
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    padding: 20px 40px;
-    margin-top:63px;
-    background: rgba(50, 50, 50, 0.4);
-    border-top: var(--main-color) 3px solid;
-    border-bottom: var(--main-color) 3px solid;
-    border-left: var(--main-color) 3px solid;
-    border-right: var(--main-color) 3px solid;
-    -webkit-box-shadow: 1px 2px 3px #000;
-    -moz-box-shadow: 1px 2px 3px #111;
-    box-shadow: 1px 2px 3px #1d1d1d;
-    -webkit-border-radius: .9em;
-    -moz-border-radius: .9em;
-    border-radius: .9em;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+  margin-top: 63px;
+  background: rgba(50, 50, 50, 0.4);
+  border-top: var(--main-color) 3px solid;
+  border-bottom: var(--main-color) 1.5px solid;
+  border-left: var(--main-color) 1.5px solid;
+  border-right: var(--main-color) 1.5x solid;
+  -webkit-box-shadow: 1px 2px 3px #000;
+  -moz-box-shadow: 1px 2px 3px #111;
+  box-shadow: 1px 2px 3px #1d1d1d;
+  -webkit-border-radius: .9em;
+  -moz-border-radius: .9em;
+  border-radius: .9em;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 }
 
 .d-box h1 {
