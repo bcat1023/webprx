@@ -1,3 +1,26 @@
+function gload() {
+  var gloadvar = "False";
+  if (gloadvar == "True") {
+    var iframe = document.getElementById('gframe');
+    iframe.src = iframe.src;
+  }
+
+  if (gloadvar == "False") {
+    console.log("noload")
+    gloadvar = "True"
+  }
+}
+
+function loafhide() {
+  document.getElementById("loader").style.visibility = "hidden";
+  console.log("Loaf hidden")
+}
+
+function loafshow() {
+  document.getElementById("loader").style.visibility = "visible";
+  console.log("Loaf shown")
+}
+
 function borger() {
   var x = document.getElementById("mynavbar");
   if (x.className === "navbar") {
@@ -27,5 +50,6 @@ function openPage(evt, tab) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tab).style.display = "block";
   evt.currentTarget.className += " active";
+  document.getElementById("loader").style.zIndex = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
 }
 document.getElementById("indexPage").click();

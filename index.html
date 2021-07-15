@@ -12,11 +12,20 @@
       };
     </script>
   </head>
-  <body>
-    <header><div class="navbar" id="mynavbar">
+  <body onload="loafhide()">
+    
+    <header>
+      <img style="height: 25px;
+      cursor: wait;
+      padding: 15px;
+      z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+      bottom: 0px;
+      position: fixed;
+      left: 0px;" id="loader" src="./img/loader.gif">
+      <div class="navbar" id="mynavbar">
       <a href="" class="logo">Titan Network</a>
   <a href="#" onclick="openPage(event, 'contact')">Contact</a>
-  <a href="#" onclick="openPage(event, 'games')" ondblclick="gframe.src = gframe.src;">Games</a>
+  <a href="#" onclick="openPage(event, 'games');" ondblclick="gframe.src = gframe.src;loafshow()">Games</a>
   <a href="#" id="indexPage" onclick="openPage(event, 'index') ">Home</a>
   <a href="javascript:void(0);" class="icon" onclick="borger()">
 
@@ -40,7 +49,7 @@
 <!-- end of index-->
 <!-- games-->
 <div id="games" class="tabcontent">
-  <iframe allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="./games.html"  style="position:fixed; top:50px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9;"></iframe>
+  <iframe onload="loafhide()" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="./games.html"  style="position:fixed; top:50px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9;"></iframe>
 </div>
 <!-- end of games-->
 <!-- contact-->
@@ -58,10 +67,8 @@
     <h2>Bookmarklets</h2>
     <h4>These bookmarklets are little scripts you put in your bookmarks bar to do cool stuff!</h4>
     <h4>Setup of these bookmarklets is simple and it can get past tools like Hapara Highlights!</h4>
-    <h4>Select a Bookmarklet below to view its code!</h4>
-    <a href="./public-txt/gdrive.txt" class="button">Google Drive Cloak</a>
-    <a href="./public-txt/gg.txt" class="button">GoGuardian Bypass</a>
-    <a href="./public-txt/portaprox.txt" class="button">PortaProxy</a>
+    <h4>Drag A Bookmarklet To Your Bookmarks Bars</h4>
+    <h5>This feature has been temporary disabled</h5>
   </div>
   </main>
 </div>
@@ -82,7 +89,7 @@
       <p>
         <input type="text" placeholder="Enter URL" style="border:none;border-radius: 5px;padding:10px;" id="url" autocomplete="false" name="url" />&nbsp;<p></p>
         <input type="button" onclick="javascript:(alert(`WARNING: The node server is currently in Testing, It may not act as intended`))" id="localnode" class="selbuttonsbigger" value="Node" />
-        <input type="submit" class="selbuttons" value="PHP" />
+        <input type="submit" class="selbuttons" onclick="loafshow()" value="PHP" />
         <script>
 var host=location.hostname.split('.'),
 	purl=location.hostname,
@@ -94,6 +101,7 @@ var nde=document.getElementById('localnode'),
     url=document.getElementById('url');
 
 nde.addEventListener('click',()=>{
+  loafshow()
   window.location.href = "https://nodeubyblock.herokuapp.com/" + url.value;
 });
 window.addEventListener('load', ()=>{
@@ -127,10 +135,11 @@ var wee=(urlData=>{ // bruhhh idek how to fix this its like something with the h
 </div>
 <!-- end of the proxy page-->
 
-
     </main>
     <footer></footer>
   </body>
 </html>
 <!--has to be at the end to function-->
 <script src="js/primary.js"></script>
+<div>
+</div></div>
