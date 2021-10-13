@@ -25,7 +25,7 @@ body:before {
    margin:0;
    background-color: white;
    color:var(--textcolor);
-   background-image:url('https://th.bing.com/th/id/R7f531e8e97a3e68423eff8515a73557d?rik=4wbv5mfnJpZz9g&riu=http%3a%2f%2fic.pics.livejournal.com%2fbilinson%2f36717090%2f100891%2f100891_original.gif&ehk=xBn9Bq0%2bFRLOexs2dNlhQAXI27sT5wgjp2hnPK4njIw%3d&risl=1&pid=ImgRaw');
+   background-image:url('/img/back.gif');
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
