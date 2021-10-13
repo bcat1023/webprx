@@ -12,12 +12,12 @@ function gload() {
 }
 
 function loafhide() {
-  document.getElementById("loader").style.visibility = "hidden";
+  document.getElementById("loader").style.opacity = "0";
   console.log("Loaf hidden")
 }
 
 function loafshow() {
-  document.getElementById("loader").style.visibility = "visible";
+  document.getElementById("loader").style.opacity = "1";
   console.log("Loaf shown")
 }
 
