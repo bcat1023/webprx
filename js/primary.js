@@ -32,6 +32,7 @@ function borger() {
 
 
 function openPage(evt, tab) {
+  loafshow()
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -51,5 +52,6 @@ function openPage(evt, tab) {
   document.getElementById(tab).style.display = "block";
   evt.currentTarget.className += " active";
   document.getElementById("loader").style.zIndex = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
+  loafhide()
 }
-document.getElementById("indexPage").click();
+//document.getElementById("indexPage").click(); what even is this for? i forgot
