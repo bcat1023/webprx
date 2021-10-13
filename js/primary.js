@@ -54,4 +54,4 @@ function openPage(evt, tab) {
   document.getElementById("loader").style.zIndex = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
   loafhide()
 }
-//document.getElementById("indexPage").click(); what even is this for? i forgot
+document.getElementById("indexPage").click();
