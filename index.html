@@ -122,12 +122,11 @@
                 url.focus();
               });
 
-              var hpy = document.getElementById('hyperpen'),
-                url = document.getElementById('url');
+              var url = document.getElementById('url');
 
-              hyp.addEventListener('click', () => {
+              document.getElementById('hyperpen').addEventListener('click', () => {
                 loafshow()
-                window.location.assign(`https://hpubyblock.herokuapp.com//prox/?url=${btoa(url)}`);
+                window.location.assign(`https://hpubyblock.herokuapp.com/prox/?url=${btoa(url)}`);
               })
 
               //these are the shortcut buttons
@@ -147,8 +146,8 @@
           <h3>Server Status:</h3>
           <h4>Node Server: (<span style='color: green'>Online</span>)</h4>
           <h4>PHP-Proxy: (<span style="color: green">Online</span>)</h4>
-          <h4>HyperPen-Server: (<span style="color: yellow">In Beta Testing</span>)<span
-              style="color: purple"> New!</span></h4>
+          <h4>HyperPen-Server: (<span style="color: yellow">In Beta Testing</span>)<span style="color: purple">
+              New!</span></h4>
           <div class="d-box">
             <h1>Quick Links</h1>
             <h3><span class="preset" onclick="wee(this.getAttribute('data'))" data="https://youtube.com"><a
