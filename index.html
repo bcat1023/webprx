@@ -109,12 +109,18 @@
             <input type="submit" class="selbuttons" onclick="loafshow()" value="PHP" />
             <script>
               function notice(num) {
-                document.getElementById('cinfo').style.color = 'red';
+                document.getElementById('c1info').style.color = 'red';
+                document.getElementById('c2info').style.color = 'red';
+                document.getElementById('c3info').style.color = 'red';
+                document.getElementById('c4info').style.color = 'red';
                 setTimeout(stopnotice, 3000)
               }
 
               function stopnotice() {
-                document.getElementById('cinfo').style.color = 'white';
+                document.getElementById('c1info').style.color = 'white';
+                document.getElementById('c2info').style.color = 'white';
+                document.getElementById('c3info').style.color = 'white';
+                document.getElementById('c4info').style.color = 'white';
               }
 
               var host = location.hostname.split('.'),
@@ -152,10 +158,10 @@
         </center>
         <center>
           <h3 style="transition: 1s;" id="sinfo">Info:</h3>
-          <h4 style="transition: 1s;" id="cinfo">Click the red button at the top to pick your server</h4>
-          <h4 style="transition: 1s;" id="cinfo">-PHP (Worst): A decent server that can do most websites while hiding the url and loading quickly</h4>
-          <h4 style="transition: 1s;" id="cinfo">-Node (Decent): Works better than PHP but dosent hide the URL and is slow</h4>
-          <h4 style="transition: 1s;" id="cinfo">-HyperPen (Best): The best and works with almost anysite loading quickly, hiding the url and
+          <h4 style="transition: 1s;" id="c1info">Click the red button at the top to pick your server</h4>
+          <h4 style="transition: 1s;" id="c2info">-PHP (Worst): A decent server that can do most websites while hiding the url and loading quickly</h4>
+          <h4 style="transition: 1s;" id="c3info">-Node (Decent): Works better than PHP but dosent hide the URL and is slow</h4>
+          <h4 style="transition: 1s;" id="c4info">-HyperPen (Best): The best and works with almost anysite loading quickly, hiding the url and
             its the newest one!</h4>
           <!--<h3>Server Status:</h3> gone for now
           <h4>Message from owner: Hey its become to much to update this manualy. Till I have a script for this it will be gone</h4>
