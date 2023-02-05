@@ -4,8 +4,8 @@
 #  status = 503
 #  force = true
 
-#[[redirects]]
-#  from = "/*"
-#  to = "/cachereset"
-#  status = 503
-#  force = true
+[[redirects]]
+  from = "/*"
+  to = "/cachereset"
+  status = 503
+  force = true
