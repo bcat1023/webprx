@@ -1,11 +1,11 @@
-#[[redirects]]
-#  from = "/*"
-#  to = "/offline"
-#  status = 503
-#  force = true
-
 [[redirects]]
   from = "/*"
-  to = "/cachereset"
+  to = "/offline"
   status = 503
   force = true
+
+#[[redirects]]
+#  from = "/*"
+#  to = "/cachereset"
+#  status = 503
+#  force = true
