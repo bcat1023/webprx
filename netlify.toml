@@ -16,4 +16,10 @@
   status = 303
   force = false
 
+[[redirects]]
+from = ""
+to = "/#"
+status = 303
+force = false
+
 #/* /404.html 404
