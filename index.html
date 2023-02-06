@@ -20,7 +20,7 @@
     <img class="loaf" id="loader" src=" ./img/loader.gif">
     <div class="navbar" id="mynavbar">
       <a href="" class="logo">Titan Network</a>
-      <a href="#" onclick="openPage(event, 'contact')">Contact</a>
+      <a href="#" onclick="openPage(event, 'contact')">Game Request</a>
       <a href="#" onclick="openPage(event, 'games');" ondblclick="gframe.src = gframe.src;loafshow()">Games</a>
       <a href="#" id="indexPage" onclick="openPage(event, 'index') ">Home</a>
       <a href="javascript:void(0);" class="icon" onclick="borger()">
@@ -60,15 +60,15 @@
         <div class="centerh containerc">
           <form name="contact" netlify>
             <p>
-              Your Email<br>
-              <label><input class="contactbox" type="email" name="email" /></label>
+              Game Request<br>
+              <label> <input class="contactbox" type="text" name="what" /></label>
             </p>
             <p>
-              What are you contacting me about?<br>
-              <label> <input class="contactbox" type="text" name="whattheywant" /></label>
+              Where can I find it<br>
+              <label> <input class="contactbox" type="text" name="where" /></label>
             </p>
             <p>
-              <button type="submit" style="background-color: transparent;border: none;" onclick="loafshow()"><a href="javascript:void" class="button">Send</a></button>
+              <button type="submit" style="background-color: transparent;border: none;" onclick="loafshow()"><a class="button">Send</a></button>
             </p>
           </form>
         </div>
