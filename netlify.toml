@@ -17,8 +17,8 @@
   force = false
 
 [[redirects]]
-from = ""
-to = "/#"
+from = "/afiles/other_logos/ia-logo-150x150.png"
+to = "/afiles/other_logos/loader.gif"
 status = 303
 force = false
 

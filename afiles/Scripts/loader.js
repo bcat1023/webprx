@@ -53,7 +53,7 @@ var Module = null;
      // yea, this is a hack
      var images;
      if (/archive\.org$/.test(document.location.hostname)) {
-       images = { ia: img("/images/ialogo.png"),
+       images = { ia: img("/images/loader.gif"),
                   mame: img("/images/mame.png"),
                   mess: img("/images/mame.png"),
                   dosbox: img("/images/dosbox.png"),
@@ -67,7 +67,7 @@ var Module = null;
                   cloudpilot: img("/images/cloudpilot.png"),
                 };
      } else {
-       images = { ia: img("other_logos/ia-logo-150x150.png"),
+       images = { ia: img("other_logos/loader.gif"),
                   mame: img("other_logos/mame.png"),
                   mess: img("other_logos/mame.png"),
                   dosbox: img("other_logos/dosbox.png"),
