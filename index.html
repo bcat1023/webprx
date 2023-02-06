@@ -58,17 +58,18 @@
     <div id="contact" class="tabcontent">
       <main>
         <div class="centerh containerc">
-          <form name="contact" netlify>
+          <form name="grequest" method="POST" data-netlify="true">
             <p>
-              Game Request<br>
-              <label> <input class="contactbox" type="text" name="what" /></label>
+              <label>Game Name (Required)<br> <input type="text" class="contactbox" name="gname" /></label>
             </p>
             <p>
-              Where can I find it<br>
-              <label> <input class="contactbox" type="text" name="where" /></label>
+              <label>Where is this game (Not Required): <br><input class="contactbox" type="test" name="gurl" /></label>
             </p>
             <p>
-              <button type="submit" style="background-color: transparent;border: none;" onclick="loafshow()"><a class="button">Send</a></button>
+              <label>Addition Details (Not Required): <br><textarea class="contactbox" name="message"></textarea></label>
+            </p>
+            <p>
+              <button style="background-color: transparent;border: none;" type="submit"><a class="button">Send</a></button>
             </p>
           </form>
         </div>
