@@ -14,6 +14,6 @@
   from = "/"
   to = "/#"
   status = 303
-  force = true
+  force = false
 
 #/* /404.html 404
