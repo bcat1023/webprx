@@ -104,20 +104,20 @@ var Module = null;
 
      var cfgr;
      function loadFiles(fetch_file, splash) {
-       splash.setTitle("Downloading game metadata...");
+       splash.setTitle("Fetching game metadata from server...");
        return new Promise(function (resolve, reject) {
                             var loading = fetch_file('Game Metadata',
                                                      get_meta_url(game),
                                                      'document');
                             loading.then(function (data) {
                                            metadata = data;
-                                           splash.setTitle("Downloading game filelist...");
+                                           splash.setTitle("Fetching game filelist from server...");
                                            return fetch_file('Game File List',
                                                              get_files_url(game),
                                                              'document', true);
                                          },
                                          function () {
-                                           splash.setTitle("Failed to download IA item metadata!");
+                                           splash.setTitle("Failed to fetch IA item metadata!");
                                            splash.failed_loading = true;
                                            reject(1);
                                          })
@@ -126,7 +126,7 @@ var Module = null;
                                              return null;
                                            }
                                            filelist = data;
-                                           splash.setTitle("Downloading emulator metadata...");
+                                           splash.setTitle("Fetching emulator metadata from server...");
                                            module = metadata.getElementsByTagName("emulator")
                                                             .item(0)
                                                             .textContent;
@@ -138,7 +138,7 @@ var Module = null;
                                            if (splash.failed_loading) {
                                              return;
                                            }
-                                           splash.setTitle("Failed to download file list!");
+                                           splash.setTitle("Failed to fetch file list!");
                                            splash.failed_loading = true;
                                            reject(2);
                                          })
@@ -270,14 +270,14 @@ var Module = null;
                                              }
                                            }
 
-                                           splash.setTitle("Downloading game data...");
+                                           splash.setTitle("Fetching game data from server...");
                                            return Promise.all(get_files(cfgr, metadata, modulecfg, filelist));
                                          },
                                          function () {
                                            if (splash.failed_loading) {
                                              return;
                                            }
-                                           splash.setTitle("Failed to download emulator metadata!");
+                                           splash.setTitle("Failed to fetch emulator metadata!");
                                            splash.failed_loading = true;
                                            reject(2);
                                          })
@@ -469,7 +469,7 @@ var Module = null;
 
        if (game_files.length > 0) {
          var file = game_files[0]; // only allow one .swf file to be loaded
-         var title = 'Downloading Game File';
+         var title = 'Fetching Game File From Server';
          var url = (file.name.includes('/')) ? get_zip_url(file.name)
                                              : get_zip_url(file.name, get_item_name(game));
          files.push(cfgr.mountFile('/' + file.name, cfgr.fetchFile(title, url)));
@@ -630,7 +630,7 @@ var Module = null;
        var len = game_files.length;
        if (game_files.length > 0) {
          var file = game_files[0]; // only allow one .swf file to be loaded
-         var title = 'Downloading Game File';
+         var title = 'Fetching Game File From Server';
          var url = (file.name.includes('/')) ? get_zip_url(file.name)
                                              : get_zip_url(file.name, get_item_name(game));
          files.push(cfgr.mountFile('/' + file.name, cfgr.fetchFile(title, url)));
@@ -1740,7 +1740,7 @@ var Module = null;
                       if (splash.failed_loading) {
                         return;
                       }
-                      splash.setTitle("Failed to download game data!");
+                      splash.setTitle("Failed to fetch game data!");
                       splash.failed_loading = true;
                     })
               .then(function () {
