@@ -10,4 +10,10 @@
 #  status = 503
 #  force = true
 
-/* /404.html 404
+[[redirects]]
+  from = "/"
+  to = "/#"
+  status = 303
+  force = true
+
+#/* /404.html 404
