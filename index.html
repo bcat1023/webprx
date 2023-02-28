@@ -17,7 +17,7 @@
 <body onload="loafhide()">
 
   <header>
-    <img class="loaf" id="loader" src=" ./img/loader.gif">
+    <img class="loaf" alt="loading-icon" id="loader" src=" ./img/loader.gif">
     <div class="navbar" id="mynavbar">
       <a href="" class="logo">Titan Network</a>
       <a href="#" onclick="openPage(event, 'contact')">Game Request</a>
@@ -47,6 +47,7 @@
       </div>
     </div>
     <!-- end of index-->
+    <script>openPage(event, 'index')</script>
     <!-- games-->
     <div id="games" class="tabcontent">
       <iframe onload="loafhide()" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
@@ -103,7 +104,6 @@
 </html>
 <!--has to be at the end to function-->
 <script src="js/primary.js"></script>
-<script>openPage(event, 'index')</script>
 <div>
 </div>
 </div>

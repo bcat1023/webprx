@@ -27,7 +27,7 @@ body {
   margin: 0;
   background-color: white;
   color: var(--textcolor);
-  background-image: url('/img/back.gif');
+  background-image: url('/img/back.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
