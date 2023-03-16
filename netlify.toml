@@ -22,4 +22,58 @@ to = "/afiles/sf2a/other_logos/loader.gif"
 status = 303
 force = false
 
-#/* /404.html 404
+[[redirects]]
+from = "/apache.conf"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/setup.txt"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/composer.lock"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/composer.json"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/web.config"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/README.md"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/Procfile"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/netlify.toml"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 404
+force = false
+
+#/* /index.html 404
