@@ -50,8 +50,7 @@ function openPage(evt, tab) {
 
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tab).style.display = "block";
-  evt.currentTarget.className += " active";
+  //evt.currentTarget.className += " active";
   document.getElementById("loader").style.zIndex = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
   loafhide()
 }
-document.getElementById("indexPage").click();
