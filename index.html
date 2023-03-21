@@ -15,7 +15,7 @@
   </script>
 </head>
 
-<body onload="loafhide()">
+<body id="body" onload="loafhide()">
 
   <header>
     <img class="loaf" alt="loading-icon" id="loader" src=" ./img/loader.gif">
@@ -24,7 +24,7 @@
       <a href="#" onclick="openPage(event, 'contact')">Game Request</a>
       <a href="#" onclick="openPage(event, 'games');" ondblclick="gframe.src = gframe.src;loafshow()">Games</a>
       <a href="#" id="indexPage" onclick="openPage(event, 'index') ">Home</a>
-      <a href="#word" class="icon" onclick="borger()">
+      <a href="#word" aria-label="Moblie-Menu" class="icon" onclick="borger()">
 
         <i class="fa fa-bars"></i>
       </a>
@@ -36,9 +36,8 @@
     <div id="index" class="tabcontent">
       <div class="centerh containerc">
         <h1>Titan Network</h1>
-        <!--<h3>Welcome To The World Of Freedom</h3>-->
-        <h4>With Titans services, you can browse the internet freely without restriction and or when your bored play games to pass the time</h4>
         <h4>No data is stored on our side and your traffic is protected by 128 bit keys, TLS 1.3, and 256 Key Size SSL ensuring your visit is secure</h4>
+        <h4>With Titans services, you can browse the internet freely without restriction and or when your bored play games to pass the time</h4>
         <h4>Use the navigation below to select your destination!</h4>
         <a href="#" onclick="openPage(event, 'selection');loafshow()" class="button">Surf Freely</a>
         <a href="#" onclick="openPage(event, 'games');" class="button">Games</a>
@@ -51,7 +50,7 @@
     <div id="games" class="tabcontent">
       <iframe onload="loafhide()" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
         oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="./games.html"
-        style="position:fixed; top:50px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9;"></iframe>
+        style="position: fixed;top: 50px;left: 0px;bottom: 0px;right: 0px;width: 100%;height: 95%;border: none;margin: 0;padding: 0;overflow: scroll;z-index: 9;"></iframe>
     </div>
     <!-- end of games-->
     <!-- contact-->

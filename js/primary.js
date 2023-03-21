@@ -54,3 +54,9 @@ function openPage(evt, tab) {
   document.getElementById("loader").style.zIndex = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
   loafhide()
 }
+
+var g = document.getElementById('gframe').clientHeight
+var n = document.getElementById('navbar').clientHeight
+
+function resizeGFrame() {g = g-n;console.log(g + " " + n)};
+window.onresize = resizeGFrame;
