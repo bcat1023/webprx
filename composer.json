@@ -11,10 +11,7 @@
                 }
         ],
         "require": {
-                //"Athlon1600/php-proxy": "dev-master",
-                //"Athlon1600/php-proxy-plugin-bundle": "dev-master",
                 "ext-mbstring": "^7.2",
-                //"Athlon1600/php-proxy": "^5.0",
                 "ext-gd": "^7.2",
                 "ext-sqlite3": "^7.2",
                 "ext-imagick": "*"
