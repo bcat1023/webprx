@@ -11,13 +11,16 @@ function gload() {
   }
 }
 
+var loader = document.getElementById("loader")
 function loafhide() {
-  document.getElementById("loader").style.opacity = "0";
+  loader.style.opacity = "0";
+  loader.style.height = "0%";
   console.log("Loaf hidden")
 }
 
 function loafshow() {
-  document.getElementById("loader").style.opacity = "1";
+  loader.style.opacity = "1";
+  loader.style.height = "";
   console.log("Loaf shown")
 }
 
@@ -30,6 +33,15 @@ function borger() {
   }
 }
 
+
+function prxmox(toggle) {
+  var frame = document.getElementById('prx')
+  if(toggle == 1) {
+    frame.src = "https://replit.com/@YodaCode/fx-us-3?lite=1&outputonly=1#.replit";
+  } else {
+    frame.src = "about:blank"
+  }
+}
 
 function openPage(evt, tab) {
   loafshow()
