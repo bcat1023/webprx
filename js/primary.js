@@ -22,6 +22,12 @@ function loafshow() {
   loader.style.opacity = "1";
   loader.style.height = "";
   console.log("Loaf shown")
+  if(document.getElementById('gframe').contentWindow['background'] = 1) {
+    return
+  } else {
+    top.document.body.style.backgroundImage = 'url(/img/loader.gif)'
+    var background = 1
+  }
 }
 
 function borger() {
@@ -65,6 +71,16 @@ function openPage(evt, tab) {
   //evt.currentTarget.className += " active";
   document.getElementById("loader").style.zIndex = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
   loafhide()
+}
+
+function backstop(toggle) {
+  if(toggle == 1) {
+    top.document.body.style.backgroundImage = 'url(/img/loader.gif)'
+    var background = 1
+  } else {
+    top.document.body.style.backgroundImage = ''
+    var background = `0`
+  }
 }
 
 var g = document.getElementById('gframe').clientHeight

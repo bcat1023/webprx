@@ -1,25 +1,39 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Unity WebGL Player | Drift Hunters</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ItchIO.json", {onProgress: UnityProgress});
+    <link rel="shortcut icon" href="./html/1792221/ItchIO/TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="./html/1792221/ItchIO/TemplateData/style.css" type="text/css" />
+    <script src="./html/1792221/ItchIO/TemplateData/UnityProgress.js" type="text/javascript"></script>
+    <script src="./html/1792221/ItchIO/Build/UnityLoader.js" type="text/javascript"></script>
+    <script type="text/javascript">      var gameInstance = UnityLoader.instantiate("gameContainer", "./html/1792221/ItchIO/Build/ItchIO.json", { onProgress: UnityProgress });
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Drift Hunters</div>
-      </div>
+        <div id="gameContainer"
+            style="width: 960px; height: 600px; padding: 0px; margin: 0px; border: 0px; position: relative;">
+            <div class="logo Light" style="display: none;"></div>
+            <div class="progress Light" style="display: none;">
+                <div class="empty" style="width: 0%;"></div>
+                <div class="full" style="width: 100%;"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="webgl-logo"></div>
+            <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+            <div class="title">Drift Hunters
+            </div>
+        </div>
     </div>
-  </body>
+    <script src="./b5f7269a-d8c4-424d-9e26-ab8d4fd5f6d1"
+        type="text/javascript"></script>
+    <script src="./74462d6b-0646-4f97-8eb9-e656aa2564c5"
+        type="text/javascript"></script>
+</body>
+
 </html>
