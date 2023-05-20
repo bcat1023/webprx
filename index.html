@@ -35,14 +35,17 @@
     <div id="index" class="tabcontent">
       <div class="centerh containerc">
         <h1>Titan Network</h1>
-        <h4>No data is stored on our side and your traffic is protected by 128 bit keys, TLS 1.3, and 256 Key Size SSL ensuring your visit is secure</h4>
-        <h4>With Titans services, you can browse the internet freely without restriction and or when your bored play games to pass the time</h4>
+        <h4>No data is stored on our side and your traffic is protected by 128 bit keys, TLS 1.3, and 256 Key Size SSL
+          ensuring your visit is secure</h4>
+        <h4>With Titans services, you can browse the internet freely without restriction and or when your bored play
+          games to pass the time</h4>
         <h4>Use the navigation below to select your destination!</h4>
         <a href="#" onclick="openPage(event, 'selection');loafshow();prxmox(1)" class="button">Surf Freely</a>
         <a href="#" onclick="openPage(event, 'games');" class="button">Games</a>
         <a href="#" onclick="openPage(event, 'bookmarklets')" class="button">Bookmarklets</a>
         <h4><a href="//thedrowsy.com">powered by thedrowsy.com</a></h4>
-        <h4>Coming in the next update: Better game request ui, aesthetics update, less laggy arcade games, live shows?</h4>
+        <h4>Coming in the next update: Better game request ui, aesthetics update, less laggy arcade games, live shows?
+        </h4>
         <h4>Latest update: Performance Upgrades, Small aesthetics update</h4>
       </div>
     </div>
@@ -66,10 +69,12 @@
               <label>Where is this game (Not Required): <br><input class="contactbox" type="test" name="gurl" /></label>
             </p>
             <p>
-              <label>Addition Details (Not Required): <br><textarea class="contactbox" name="message"></textarea></label>
+              <label>Addition Details (Not Required): <br><textarea class="contactbox"
+                  name="message"></textarea></label>
             </p>
             <p>
-              <button style="background-color: transparent;border: none;" type="submit"><a class="button">Send</a></button>
+              <button style="background-color: transparent;border: none;" type="submit"><a
+                  class="button">Send</a></button>
             </p>
           </form>
         </div>
@@ -90,11 +95,68 @@
     </div>
     <!--end of Bookmarklets-->
 
-
-    <!-- Surf Freely-->
+    <!-- Surf Freely -->
     <div id="selection" style="height:60vh;" class="tabcontent">
-        <p style="z-index:9999;background-color: white;color: black;position: fixed; top: 5%;text-align: center;">Press Green Run Button (Takes awhile to load)</p>
-        <iframe onload="loafhide()" loading="lazy" style="padding-left: 5%;padding-right: 5%;width: -webkit-fill-available;" id="prx" class="proxyframe" src="about:blank" frameborder="0"></iframe>
+      <div class="c-box containerb">
+        <center>
+          <h1>Surf Freely</h1>
+          <h2>Please select a server to browse freely on.</h2>
+        </center>
+        <center>
+          <!--<form action="" method="get" id="web-search-box" style="transform:scale(1.1)">-->
+          <p>
+            <button class="button" onclick="openPage(event, 'node')">Node</button>
+            <button class="button" onclick="openPage(event, 'fire')">Firefox</button>
+          </p>
+          </form>
+        </center>
+        <center>
+
+          <h4>-FireFox (Browser): Slow, unstable, better compatibility</h4>
+          <h4>-Node Unblocker (Node): Fast, stable, worse compatibility</h4>
+          <h4>Node Server: (<span style='color: yellow' id="idcheck"> CHECKING... </span>) ( 8AM-8PM M-F )</h4>
+          <h4>FireFox Server: (<span style="color: green"> ONLINE </span>)</h4>
+          <div class="d-box">
+            <h1>Support List:</h1>
+            <h3><span class="preset" onclick="wee(this.getAttribute('data'))" data="invidio.us"><a
+                  href="#">Invidious</a></span><span> (Video Streaming) |<cctb>Node</cctb>
+                <cctb>Browser</cctb>
+              </span></h3>
+            <h3><span class="preset" onclick="wee(this.getAttribute('data'))" data="google.com"><a
+                  href="#">Google</a></span><span> (Search Engine) | <cctb>Node</cctb>
+                <cctb>Browser</cctb>
+              </span></h3>
+            <h3><span class="preset" onclick="wee(this.getAttribute('data'))" data="startpage.com"><a
+                  href="#">Startpage</a></span><span> (Search Engine) | <cctb>Node</cctb>
+                <cctb>Browser</cctb>
+              </span></h3>
+            <h3><span class="preset" onclick="wee(this.getAttribute('data'))" data="andkon.com"><a
+                  href="#">Andkon</a></span><span> (Gaming) | <cctb>Node</cctb>
+                <cctb>Browser</cctb>
+              </span></h3>
+            <h3><span class="preset" onclick="wee(this.getAttribute('data'))" data="youtube.com"><a
+                  href="#">YouTube</a></span><span> (Video Streaming) |<cctb>Node</cctb>
+                <cctb>Browser</cctb>
+              </span></h3>
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <!-- Node server -->
+    <div id="node" style="height:60vh;" class="tabcontent">
+      <iframe onload="idcheck();loafhide()"
+        style="padding-left: 5%;padding-right: 5%;width: -webkit-fill-available;" class="proxyframe"
+        src="http://nvirginia.datacenter.thedrowsy.com" frameborder="0"></iframe>
+    </div>
+
+    <!-- Repl server -->
+    <div id="fire" style="height:60vh;" class="tabcontent">
+      <p style="z-index:9999;background-color: white;color: black;position: fixed; top: 5%;text-align: center;">Press
+        Green Run Button (Takes awhile to load)</p>
+      <iframe onload="loafhide()" loading="lazy"
+        style="padding-left: 5%;padding-right: 5%;width: -webkit-fill-available;" id="prx" class="proxyframe"
+        src="about:blank" frameborder="0"></iframe>
     </div>
   </main>
   <footer></footer>
