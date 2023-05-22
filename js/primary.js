@@ -1,26 +1,5 @@
-var fail = 0
 
-function idcheck() {
-  if(fail === 0) {
-    document.getElementById('idcheck').innerText = ' ONLINE '
-    document.getElementById('idcheck').style.color = 'green';
-  } else {
-    console.log("Node Server timed out")
-  }
-}
-
-setTimeout(() => {
-  if(document.getElementById('idcheck').innerText === ' ONLINE ') {
-    console.log('Node Server OKAY')
-  }
-  if(document.getElementById('idcheck').innerText === ' CHECKING... ') {
-    document.getElementById('idcheck').innerText = ' OFFLINE ';
-    document.getElementById('idcheck').style.color = 'red';
-    console.log('Node Server NOT OKAY')
-  }
-}, 4000);
-
-
+function
 function gload() {
   var gloadvar = "False";
   if (gloadvar == "True") {
