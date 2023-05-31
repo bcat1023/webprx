@@ -1,5 +1,4 @@
 
-function
 function gload() {
   var gloadvar = "False";
   if (gloadvar == "True") {
