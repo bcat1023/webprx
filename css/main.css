@@ -161,6 +161,18 @@ body {
   left: 0px;
 }
 
+.notfibar {
+  background-color: blue;
+  margin-top: 43px;
+  width: 100%;
+  z-index: 99;
+}
+
+.activetick {
+  opacity: 0;
+  transition: 1s;
+}
+
 .button {
   /*background-color: var(--main-color);*/
   border: none;

@@ -23,7 +23,7 @@ function loafshow() {
   loader.style.opacity = "1";
   loader.style.height = "";
   console.log("Loaf shown")
-  if(document.getElementById('gframe').contentWindow['background'] = 1) {
+  if (document.getElementById('gframe').contentWindow['background'] = 1) {
     return
   } else {
     top.document.body.style.backgroundImage = 'url(/img/loader.gif)'
@@ -39,10 +39,10 @@ function borger() {
     x.className = "navbar";
   }
 }
- 
+
 function prxmox(toggle) {
   var frame = document.getElementById('prx')
-  if(toggle == 1) {
+  if (toggle == 1) {
     frame.src = "https://replit.com/@YodaCode/fx-us-3?lite=1&outputonly=1#.replit";
   } else {
     frame.src = "about:blank"
@@ -73,8 +73,49 @@ function openPage(evt, tab) {
   loafhide()
 }
 
+// Redo for efficency *$^
+document.getElementById('tick').style.opacity = 1
+setTimeout(() => {
+  document.getElementById('tick').style.opacity = 0
+  tick1()
+}, 4000);
+
+function tick1() {
+  setTimeout(() => {
+    document.getElementById('tick').innerText = "Donkey Kong will be released soon"
+    document.getElementById('tick').style.opacity = 1
+    setTimeout(() => {
+      document.getElementById('tick').style.opacity = 0
+      tick2()
+    }, 4000);
+  }, 1000);
+}
+
+function tick2() {
+  setTimeout(() => {
+    document.getElementById('tick').innerText = "Node Prox is temporarily unavailable until further notice"
+    document.getElementById('tick').style.opacity = 1
+    setTimeout(() => {
+      document.getElementById('tick').style.opacity = 0
+      tick3()
+    }, 4000);
+  }, 1000);
+}
+
+function tick3() {
+  setTimeout(() => {
+    document.getElementById('tick').innerText = "Super Mario 64 is now available"
+    document.getElementById('tick').style.opacity = 1
+    setTimeout(() => {
+      document.getElementById('tick').style.opacity = 0
+      tick1()
+    }, 4000);
+  }, 1000);
+}
+
+
 function backstop(toggle) {
-  if(toggle == 1) {
+  if (toggle == 1) {
     top.document.body.style.backgroundImage = 'url(/img/loader.gif)'
     var background = 1
   } else {
@@ -86,5 +127,5 @@ function backstop(toggle) {
 var g = document.getElementById('gframe').clientHeight
 var n = document.getElementById('navbar').clientHeight
 
-function resizeGFrame() {g = g-n;console.log(g + " " + n)};
+function resizeGFrame() { g = g - n; console.log(g + " " + n) };
 window.onresize = resizeGFrame;
