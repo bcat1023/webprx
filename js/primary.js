@@ -82,7 +82,7 @@ setTimeout(() => {
 
 function tick1() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Donkey Kong will be released soon"
+    document.getElementById('tick').innerText = "If you have a game suggestion leave it in the Game Requests tab"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -104,7 +104,7 @@ function tick2() {
 
 function tick3() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Super Mario 64 is now available"
+    document.getElementById('tick').innerText = "Donkey Kong will be released soon"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0

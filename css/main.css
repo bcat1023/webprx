@@ -164,8 +164,10 @@ body {
 .notfibar {
   background-color: blue;
   margin-top: 43px;
-  width: 100%;
+  width: -webkit-fill-available;
   z-index: 99;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 .activetick {
