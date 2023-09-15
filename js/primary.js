@@ -93,7 +93,7 @@ function tick1() {
 
 function tick2() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Flash Makes a return to Titan Network"
+    document.getElementById('tick').innerText = "Chrome is now available in Surf Freely"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
