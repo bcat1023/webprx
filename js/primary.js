@@ -43,7 +43,7 @@ function borger() {
 function prxmox(toggle) {
   var frame = document.getElementById('prx')
   if (toggle == 1) {
-    frame.src = "https://replit.com/@YodaCode/fx-us-3?lite=1&outputonly=1#.replit";
+    frame.src = "https://replit.com/@Marc-020513/Chrome?lite=1&outputonly=1#.replit";
   } else {
     frame.src = "about:blank"
   }
@@ -104,7 +104,7 @@ function tick2() {
 
 function tick3() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Out Now: Papa's Freezeria & Papa'qs Pizzeria"
+    document.getElementById('tick').innerText = "Out Now: Papa's Wingaria & Papa'qs Pankcakeria"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
