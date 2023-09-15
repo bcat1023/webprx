@@ -104,7 +104,7 @@ function tick2() {
 
 function tick3() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Out Now: Bloons TD 5"
+    document.getElementById('tick').innerText = "Out Now: Papa's Freezeria & Papa's Pizzeria"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
