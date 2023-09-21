@@ -104,7 +104,7 @@ function tick2() {
 
 function tick3() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Out Now: Papa's Bakeira & Papa's Donuteria"
+    document.getElementById('tick').innerText = "Out Now: Papa's Hot Doggeria  & Papa's Donuteria"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
