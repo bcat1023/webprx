@@ -82,7 +82,7 @@ setTimeout(() => {
 
 function tick1() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "If you have a game suggestion leave it in the Game Requests tab"
+    document.getElementById('tick').innerText = "Hi matthew"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -93,7 +93,7 @@ function tick1() {
 
 function tick2() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Chrome is now available in Surf Freely"
+    document.getElementById('tick').innerText = "Shell shockers coming soon"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -104,7 +104,7 @@ function tick2() {
 
 function tick3() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Out Now: Papa's Hot Doggeria  & Papa's Donuteria"
+    document.getElementById('tick').innerText = "Get ready for Mortal Kombat"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
