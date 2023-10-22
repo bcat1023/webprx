@@ -82,7 +82,7 @@ setTimeout(() => {
 
 function tick1() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Hi matthew"
+    document.getElementById('tick').innerText = "Club Pacman is out now"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
