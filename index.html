@@ -9,12 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Titan network, we got everything">
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "jfqbxhzxx6");
-</script>
+  </script>
   <script>
     document.oncontextmenu = function () {
       return false;
@@ -28,7 +28,8 @@
     <div class="navbar" id="mynavbar">
       <a href="/" class="logo">Titan Network</a>
       <a href="#" onclick="openPage(event, 'contact');prxmox(0);">Game Request</a>
-      <a href="#" onclick="openPage(event, 'games');prxmox(0)" ondblclick="gframe.src = gframe.src;top.loafshow()">Games</a>
+      <a href="#" onclick="openPage(event, 'games');prxmox(0)"
+        ondblclick="gframe.src = gframe.src;top.loafshow()">Games</a>
       <a href="#" id="indexPage" onclick="openPage(event, 'index');prxmox(0)">Home</a>
       <a href="#word" aria-label="Moblie-Menu" class="icon" onclick="borger()">
         <i class="fa fa-bars"></i>
@@ -39,17 +40,17 @@
     <!-- Tab content -->
     <!-- index-->
     <div id="index" class="tabcontent">
-      <div class="notfibar"><p id="tick" class="activetick">New games out</p></div>
+      <div class="notfibar">
+        <p id="tick" class="activetick">Surf Freely outage...</p>
+      </div>
       <div class="centerh containerc">
         <h1>Titan Network</h1>
-        <br>
         <h4>Use the navigation below to select your destination!</h4>
         <br>
         <a href="#" onclick="openPage(event, 'selection');prxmox(1)" class="button">Surf Freely</a>
         <a href="#" onclick="openPage(event, 'games');" class="button">Games</a>
         <a href="#" onclick="openPage(event, 'bookmarklets')" class="button">Bookmarklets</a>
-        <br><br>
-        <h2 style="margin-left: 5%;margin-right: 5%;">We are currently reworking the Drowsy Infrastructure, during this process this site might become unreliable at times.</h2>
+        <h1>Surf Freely is down due to technical difficulties.</h1>
         <h4><a href="//thedrowsy.com">powered by thedrowsy.com</a></h4>
         <h4><a href="//thedrowsy.com/yourdata">Privacy Policy</a></h4>
       </div>
@@ -66,16 +67,14 @@
     <div id="contact" class="tabcontent">
       <main>
         <div class="centerh containerc">
+          <h6>System is OK.</h6>
+          <h1>Submit a Game Request</h1>
           <form name="grequest" method="POST" data-netlify="true">
             <p>
-              <label>Game Name (Required)<br> <input type="text" class="contactbox" name="gname" /></label>
+              <input type="text" class="contactbox" name="gname" placeholder="Game Name" />
             </p>
             <p>
-              <label>Where is this game (Not Required): <br><input class="contactbox" type="test" name="gurl" /></label>
-            </p>
-            <p>
-              <label>Addition Details (Not Required): <br><textarea class="contactbox"
-                  name="message"></textarea></label>
+              <textarea class="contactbox" name="message" placeholder="Addition Details"></textarea></label>
             </p>
             <p>
               <button style="background-color: transparent;border: none;" type="submit"><a
@@ -94,7 +93,7 @@
           <!--<h4>These bookmarklets are little scripts you put in your bookmarks bar to do cool stuff!</h4>
           <h4>Setup of these bookmarklets is simple and it can get past tools like Hapara Highlights!</h4>
           <h4>Drag A Bookmarklet To Your Bookmarks Bars</h4>-->
-          <h5>This feature will return soon</h5>
+          <h5>This feature may return</h5>
         </div>
       </main>
     </div>
@@ -106,32 +105,41 @@
         <center>
           <h1>Surf Freely</h1>
           <h2>Please select a server to browse freely on.</h2>
+          <h3 style="color: red;">SYSTEM OFFLINE</h3>
         </center><br>
-            <div class="parent"> 
-              <div class="div1"><div class="boxbutton"><button class="button" onclick="openPage(event, 'node');loafshow()">Node</button></div></div> 
-              <div class="div2"><div class="boxtext"><p><span style="color:red;">Service Interruption</span><br>Node will return soon but for now service is unavailable</p></div></div> 
-              <br>
-              <div class="div3"><button class="button" onclick="openPage(event, 'fire');loafshow()">Chrome</button></div> 
-              <div class="div4"><p><span style="color:green;">online</span><br>Slow, stable, better compatibility, no sound</p></div> 
-              <h2>Firefox will return soon</h2>
-              </div>
+        <div class="parent">
+          <div class="div1">
+            <div class="boxbutton"><button class="button" onclick="openPage(event, 'node');loafshow()">Node</button>
+            </div>
+          </div>
+          <div class="div2">
+            <div class="boxtext">
+              <p><span style="color:red;">Service Interruption</span><br>Node will return soon but for now service is
+                unavailable</p>
+            </div>
+          </div>
+          <br>
+          <div class="div3"><button class="button" onclick="openPage(event, 'fire');loafshow()">Chrome</button></div>
+          <div class="div4">
+            <p><span style="color:red;">Service Interruption</span><br>Slow, stable, better compatibility, no sound</p>
+          </div>
+        </div>
 
-          </form>
+        </form>
       </div>
     </div>
 
     <!-- Node server -->
     <div id="node" style="height: 47vh; display: block;" class="tabcontent">
-      <iframe onload="loafhide()" style="/* padding-left: 5%; */ /* padding-right: 5%; */ width: -webkit-fill-available; margin-top: 38px;" class="proxyframe" src="https://virginiadatacenter.thedrowsy.com" frameborder="0"></iframe>
-    </div>  
+      <iframe onload="loafhide()"
+        style="/* padding-left: 5%; */ /* padding-right: 5%; */ width: -webkit-fill-available; margin-top: 38px;"
+        class="proxyframe" src="https://virginiadatacenter.thedrowsy.com" frameborder="0"></iframe>
+    </div>
 
     <!-- Repl server -->
     <div id="fire" style="height:60vh;" class="tabcontent">
-      <p style="z-index:9999;background-color: white;color: black;position: fixed; top: 5%;text-align: center;">Press
-        Green Run Button (Takes awhile to load)</p>
       <iframe onload="loafhide()" loading="lazy"
-        style="padding-left: 5%;padding-right: 5%;width: -webkit-fill-available;" id="prx" class="proxyframe"
-        src="about:blank" frameborder="0"></iframe>
+        style="width: -webkit-fill-available;" id="prx" class="proxyframe" src="about:blank" frameborder="0"></iframe>
     </div>
   </main>
   <footer></footer>

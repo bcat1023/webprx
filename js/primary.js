@@ -43,7 +43,7 @@ function borger() {
 function prxmox(toggle) {
   var frame = document.getElementById('prx')
   if (toggle == 1) {
-    frame.src = "https://replit.com/@Marc-020513/Chrome?lite=1&outputonly=1#.replit";
+    frame.src = "https://offline.thedrowsy.com";
   } else {
     frame.src = "about:blank"
   }
@@ -82,7 +82,7 @@ setTimeout(() => {
 
 function tick1() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Club Pacman is out now"
+    document.getElementById('tick').innerText = "Surf Freely is experiencing a total service outage"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -93,7 +93,7 @@ function tick1() {
 
 function tick2() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Shell shockers coming soon"
+    document.getElementById('tick').innerText = "New games coming soon."
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -104,7 +104,7 @@ function tick2() {
 
 function tick3() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Get ready for Mortal Kombat"
+    document.getElementById('tick').innerText = "Want more games? submit a game request."
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
