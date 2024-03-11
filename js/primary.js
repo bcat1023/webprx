@@ -1,3 +1,7 @@
+if(location.hostname == '127.0.0.1') {
+  location.href = '//beta.thedrowsy.com';
+} else {console.log('No Redirect')}
+
 
 function gload() {
   var gloadvar = "False";
