@@ -1,5 +1,5 @@
-if(location.hostname == '127.0.0.1') {
-  location.href = '//beta.thedrowsy.app';
+if(location.hostname == 'netlify.com') {
+  location.href = '//beta.thedrowsy.com';
 } else {console.log('No Redirect')}
 
 
