@@ -1,5 +1,8 @@
 if(location.hostname == 'drowsygtnin.netlify.app') {
   location.href = '//beta.thedrowsy.com';
+}
+if(location.hostname == '127.0.0.1' || 'localhost') {
+  top.document.getElementById("Beta").style.opacity = '1'
 } else {
   console.log('No Redirect ' + location.hostname)
 }
@@ -49,7 +52,7 @@ function borger() {
 function prxmox(toggle) {
   var frame = document.getElementById('prx')
   if (toggle == 1) {
-    frame.src = "https://offline.thedrowsy.com";
+    frame.src = "/p/home";
   } else {
     frame.src = "about:blank"
   }
