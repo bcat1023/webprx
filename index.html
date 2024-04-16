@@ -20,7 +20,6 @@
     <img class="loaf" alt="loading-icon" id="loader" src=" ./img/loader.gif">
     <div class="navbar" id="mynavbar">
       <a href="/" class="logo">Titan Network</a>
-      <a href="/" class="logo" id="Beta" style="color: red; opacity: 0;">Beta - Confidentiality is in place</a> <!-- This message is used for beta builds, ignore this-->
       <a href="#" onclick="openPage(event, 'contact');prxmox(0);">Game Request</a>
       <a href="#" onclick="openPage(event, 'games');prxmox(0)"
         ondblclick="gframe.src = gframe.src;top.loafshow()">Games</a>
@@ -44,8 +43,6 @@
         <a href="#" onclick="openPage(event, 'selection');prxmox(1)" class="button">Surf Freely</a>
         <a href="#" onclick="openPage(event, 'games');" class="button">Games</a>
         <a href="#" onclick="openPage(event, 'contact')" class="button">Game Reqeust</a>
-        <h2>Bookmarklets will not be making a return due to a Chrome v115 update</h2>
-        <h2>The Clarity Project has withdrawn from this site, The use of Microsoft Clarity is discontinued</h2>
         <h4><a href="//thedrowsy.com">powered by thedrowsy.com</a></h4>
         <h4><a href="//thedrowsy.com/yourdata">Privacy Policy</a></h4>
       </div>
@@ -54,15 +51,13 @@
     <!-- games-->
     <div id="games" class="tabcontent">
       <iframe onload="loafhide()" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
-        oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="./games.html"
-        style="position: fixed;top: 50px;left: 0px;bottom: 0px;right: 0px;width: 100%;height: 95%;border: none;margin: 0;padding: 0;overflow: scroll;z-index: 9;"></iframe>
+        oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="./games.html" class="igame"></iframe>
     </div>
     <!-- end of games-->
     <!-- contact-->
     <div id="contact" class="tabcontent">
       <main>
         <div class="centerh containerc">
-          <h6>System is OK.</h6>
           <h1>Submit a Game Request</h1>
           <form name="grequest" method="POST" data-netlify="true">
             <p>
@@ -85,28 +80,9 @@
     <div id="selection" style="height:60vh;" class="tabcontent">
       <div class="c-box containerb">
         <center>
-          <h1>Surf Freely</h1>
-          <h2>Please select a server to browse freely on.</h2>
-          <h3 style="color: red;">SYSTEM OFFLINE</h3>
+          <h1>Not yet available</h1>
+          <h2>This feature is being re engineered at the moment</h2>
         </center><br>
-        <div class="parent">
-          <div class="div1">
-            <div class="boxbutton"><button class="button" onclick="openPage(event, 'node');loafshow()">Node</button>
-            </div>
-          </div>
-          <div class="div2">
-            <div class="boxtext">
-              <p><span style="color:red;">Service Interruption</span><br>Node will return soon but for now service is
-                unavailable</p>
-            </div>
-          </div>
-          <br>
-          <div class="div3"><button class="button" onclick="openPage(event, 'fire');loafshow()">Chrome</button></div>
-          <div class="div4">
-            <p><span style="color:red;">Service Interruption</span><br>Slow, stable, better compatibility, no sound</p>
-          </div>
-        </div>
-
         </form>
       </div>
     </div>

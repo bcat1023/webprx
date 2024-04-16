@@ -1,15 +1,3 @@
-#[[redirects]]
-#  from = "/*"
-#  to = "/offline"
-#  status = 503
-#  force = true
-#
-#[[redirects]]
-#  from = "/*"
-#  to = "/cachereset"
-#  status = 503
-#  force = true
-
 [[redirects]]
   from = "/"
   to = "/#"
@@ -25,55 +13,59 @@ force = false
 [[redirects]]
 from = "/apache.conf"
 to = "/index.html"
-status = 200
+status = 401
 force = true
 
 [[redirects]]
 from = "/setup.txt"
 to = "/index.html"
-status = 200
+status = 401
 force = true
 
 [[redirects]]
 from = "/composer.lock"
 to = "/index.html"
-status = 200
+status = 401
 force = true
 
 [[redirects]]
 from = "/composer.json"
 to = "/index.html"
-status = 200
+status = 401
 force = true
 
 [[redirects]]
 from = "/web.config"
 to = "/index.html"
-status = 200
+status = 401
 force = true
 
 [[redirects]]
 from = "/README.md"
 to = "/index.html"
-status = 200
+status = 401
 force = true
 
 [[redirects]]
 from = "/Procfile"
 to = "/index.html"
-status = 200
+status = 401
 force = true
 
 [[redirects]]
 from = "/netlify.toml"
 to = "/index.html"
-status = 200
+status = 401
 force = true
 
 [[redirects]]
-from = "/*"
+from = "/p"
 to = "/index.html"
-status = 404
-force = false
+status = 401
+force = true
 
-#/* /index.html 404
+[[redirects]]
+from = "/p/*"
+to = "/index.html"
+status = 401
+force = true

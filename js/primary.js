@@ -1,13 +1,3 @@
-if(location.hostname == 'drowsygtnin.netlify.app') {
-  location.href = '//beta.thedrowsy.com';
-}
-if(location.hostname == '127.0.0.1' || 'localhost') {
-  top.document.getElementById("Beta").style.opacity = '1'
-} else {
-  console.log('No Redirect ' + location.hostname)
-}
-
-
 function gload() {
   var gloadvar = "False";
   if (gloadvar == "True") {
