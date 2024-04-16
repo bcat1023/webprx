@@ -1,0 +1,31 @@
+<body>
+    <center>
+        <h1>Navigator:</h1>
+        <p>App Version:</p>
+        <p id="appVer">please wait....</p>
+        <br>
+        <p>Cookies Staus:</p>
+        <p id="Cookie">please wait....</p>
+        <br>
+        <p>PDF Viewer Available:</p>
+        <p id="pdf">please wait....</p>
+        <br>
+        <p>Platform:</p>
+        <p id="platform">please wait....</p>
+        <br>
+        <p>User Agent:</p>
+        <p id="ua">please wait....</p>
+        <br>
+        <p>Vendor:</p>
+        <p id="vendor">please wait....</p>
+        <br>
+    </center>
+    <script>
+        document.getElementById('appVer').innerText = navigator.appVersion
+        document.getElementById('Cookie').innerText = navigator.cookieEnabled
+        document.getElementById('pdf').innerText = navigator.pdfViewerEnabled
+        document.getElementById('platform').innerText = navigator.platform
+        document.getElementById('ua').innerText = navigator.userAgent
+        document.getElementById('vendor').innerText = navigator.vendor
+    </script>
+</body>
