@@ -36,7 +36,9 @@ function validate(input) {
 }
 
 input.addEventListener('keyup', (key) => {
-    execute()
+    if(key.keyCode == 13) {
+        execute()
+    };
 });
 
 
@@ -45,14 +47,7 @@ document.querySelector("#initiate").addEventListener('click', () => {
 });
 
 function execute() {
-    var hostname = top.window.location.href;
-    if(hostname == 'about:blank') {
-        console.log('All clear, domain is about:blank')
         statusT.innerText = 'Loading...'
         validUrl = validate(input.value)
         window.location.assign(validUrl);
-    } else {
-        statusT.innerText = `Bad Hostname... ${hostname}`
-        throw new Error(`Bad Hostname... ${hostname}`)
-    }
 }
