@@ -57,3 +57,21 @@ from = "/netlify.toml"
 to = "/index.html"
 status = 401
 force = true
+
+[[redirects]]
+from = "/p/home.html"
+to = "/index.html"
+status = 401
+force = true
+
+[[redirects]]
+from = "/p/home.css*"
+to = "/index.html"
+status = 401
+force = true
+
+[[redirects]]
+from = "/p/home.js*"
+to = "/index.html"
+status = 401
+force = true
