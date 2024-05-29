@@ -1,5 +1,5 @@
 var input = document.getElementById('url')
-var statusT = top.document.getElementById('status')
+var statusT = document.getElementById('status')
 
 // Algorithm to complete a url and test for a valid address
 function validate(input) {
@@ -36,16 +36,18 @@ function validate(input) {
 }
 
 input.addEventListener('keyup', (key) => {
-    if (key.keyCode == 13) {
-        statusT.innerText = 'Loading...'
-        validUrl = validate(input.value)
-        window.location.assign(validUrl);
-    }
+    if(key.keyCode == 13) {
+        execute()
+    };
 });
 
 
 document.querySelector("#initiate").addEventListener('click', () => {
-    statusT.innerText = 'Loading...'
-    validUrl = validate(input.value)
-    window.location.assign(validUrl);
+    execute()
 });
+
+function execute() {
+        statusT.innerText = 'Loading...'
+        validUrl = validate(input.value)
+        window.location.assign(validUrl);
+}
