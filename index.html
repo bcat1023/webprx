@@ -38,6 +38,14 @@
       </div>
       <div class="centerh containerc">
         <h1>Titan Network</h1>
+        <div class="contaner" style="position: fixed;width: 100%;height: 100%;top: 0;">
+          <div id="popup" class="c-box" style="width: 50%;margin: auto;">
+            <h1>Important Update for Titan Network Users</h1>
+            <button class="button" onclick="openPage(event, 'phaseNotice')"><a style="color: green;">Open</a></button>
+            <button class="button" onclick="javascript:document.getElementById('popup').style.display = 'none';" style="color: red;">Dismiss</button>
+            <hr style="opacity: 0;">
+          </div>
+        </div>
         <h4>Blocked? Use our new mirror! <a href="//tinyurl.com/8081GN">tinyurl.com/8081GN</a></h4>
         <br>
         <a href="#" onclick="openPage(event, 'error');prxmox(1)" class="button">Surf Freely</a>
@@ -52,6 +60,10 @@
     <div id="games" class="tabcontent">
       <iframe onload="loafhide()" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
         oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="./games.html" class="igame"></iframe>
+    </div>
+    <div id="phaseNotice" class="tabcontent">
+      <iframe onload="loafhide()" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+        oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="/notice.html" class="igame"></iframe>
     </div>
     <!-- end of games-->
     <!-- contact-->
@@ -75,29 +87,29 @@
       </main>
     </div>
     <!-- end of contact-->
-    
+
     <!-- Surf Freely -->
     <div id="selection" style="height:60vh;" class="tabcontent">
       <div class="c-box containerb">
         <center>
           <div class="wrapper">
             <header>
-                <!--<div id="intro">Al<span>loy</span> Pro<span>xy</span></div>
+              <!--<div id="intro">Al<span>loy</span> Pro<span>xy</span></div>
                 <a id="github" href="https://github.com/titaniumnetwork-dev/alloy"><i class="fab fa-github"></i>Fork on Github</a>-->
-                <div id="intro">Titan Network Securely Bypass (In Beta)</div>
+              <div id="intro">Titan Network Securely Bypass (In Beta)</div>
             </header>
             <div class="container">
-                <div class="form">
-                    <input placeholder="https://google.com" id="url">
-                    <button id="initiate">Go</button>
-                    <p id="status" style="color: white"></p>
-                </div>
-               <div class="info">
-                   <h2>This is an experiment, this may not work and might not hide your history</h2>
-                </div> 
+              <div class="form">
+                <input placeholder="https://google.com" id="url">
+                <button id="initiate">Go</button>
+                <p id="status" style="color: white"></p>
+              </div>
+              <div class="info">
+                <h2>This is an experiment, this may not work and might not hide your history</h2>
+              </div>
             </div>
-        </div>   
-        <script src="/p/home.js"></script>
+          </div>
+          <script src="/p/home.js"></script>
         </center><br>
         </form>
       </div>
@@ -112,8 +124,8 @@
 
     <!-- Repl server -->
     <div id="fire" style="height:60vh;" class="tabcontent">
-      <iframe onload="loafhide()" loading="lazy"
-        style="width: -webkit-fill-available;" id="prx" class="proxyframe" src="about:blank" frameborder="0"></iframe>
+      <iframe onload="loafhide()" loading="lazy" style="width: -webkit-fill-available;" id="prx" class="proxyframe"
+        src="about:blank" frameborder="0"></iframe>
     </div>
   </main>
   <footer></footer>
