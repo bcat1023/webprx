@@ -1,3 +1,17 @@
+let lock = document.getElementById("lockout");
+lock.disabled = true;
+function hidePopup() {
+  let popup = document.getElementById('popup')
+  let cont = document.getElementById('container')
+  popup.style.display = 'none';
+  cont.style.display = 'none';
+}
+function allow() {
+  lock.disabled = false;
+  lock.style.opacity = 1;
+}
+setTimeout(allow, 1500)
+
 function gload() {
   var gloadvar = "False";
   if (gloadvar == "True") {
