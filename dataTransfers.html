@@ -53,10 +53,36 @@
         <h1>Time to transfer your save data</h1>
         <hr>
         <div class="left">
-            <p>When the new site goes online you'll need to transfer your saves to the new site. You can do that here, copy your code and save it in a Google Doc for later.</p>
-            <p>Once the new website is online you can paste in your save codes and play your games. Currently RetroBowl is only accepting transfers, ill add more soon.</p>
-            <br><hr><br>
+            <p>When the new site goes online you'll need to transfer your saves to the new site. You can do that here,
+                copy your code and save it in a Google Doc for later.</p>
+            <p>Once the new website is online you can paste in your save codes and play your games. Currently RetroBowl
+                is only accepting transfers, ill add more soon.</p>
+            <br>
+            <hr><br>
             <a href="//titan.nookalley.com/import"><button>Sync saves with new site</button></a>
+            <iframe id="crossDomainIframe" src="https://domainB.com/receiveData.html" style="display:none"></iframe>
+
+            <script>
+                const iframe = document.getElementById('crossDomainIframe');
+                const gameSaveData = top.localStorage.getItem('RetroBowl.0.savedata.ini'); // The compressed game save file
+                const chunkSize = 4096; // 4KB chunk size (adjust if needed)
+                const chunks = [];
+
+                // Split the game save data into smaller chunks (4KB each)
+                for (let i = 0; i < gameSaveData.length; i += chunkSize) {
+                    chunks.push(gameSaveData.slice(i, i + chunkSize));
+                }
+
+                // When the iframe is ready, start sending chunks
+                iframe.onload = function () {
+                    chunks.forEach((chunk, index) => {
+                        setTimeout(() => {
+                            iframe.contentWindow.postMessage({ action: 'sendChunk', chunk, index }, 'https://domainB.com');
+                        }, index * 100); // Small delay to avoid overwhelming the iframe
+                    });
+                };
+            </script>
+
             <br><br>
             <hr><br>
             <a href="/notice.html">Don't know whats happening?</a>

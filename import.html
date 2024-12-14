@@ -43,20 +43,38 @@
         <h1>Data Received</h1>
         <hr>
         <div class="left">
-            <p>Your save data has been uploaded to the new website, if you keep playing and make more progress you'll need to do another transfer.</p>
+            <p>Your save data has been uploaded to the new website, if you keep playing and make more progress you'll
+                need to do another transfer.</p>
             <p>Your future proof, enjoy :)</p>
             <a href="javascript:history.back()">Go back</a>
         </div>
     </div>
 
     <script>
-        try {
-            var retroBowl = top.localStorage.getItem("RetroBowl.0.savedata.ini")
-        localStorage.setItem("RetroBowl.0.savedata.ini", retroBowl)
-        } catch(err) {
-            alert(err)
-        }
+        let receivedChunks = [];
+        let totalChunks = 0;
+
+        window.addEventListener('message', function (event) {
+            // Ensure that the message comes from the expected domain
+            if (event.origin !== 'https://domainA.com') {
+                return; // Ignore messages from unknown origins
+            }
+
+            // Handle the message containing a chunk of data
+            if (event.data.action === 'sendChunk') {
+                receivedChunks[event.data.index] = event.data.chunk; // Store the chunk
+                totalChunks++;
+
+                // If all chunks are received, reassemble the full data
+                if (totalChunks === receivedChunks.length) {
+                    const fullData = receivedChunks.join(''); // Reassemble the data
+                    localStorage.setItem('RetroBowl.0.savedata.ini', fullData); // Store the full data in localStorage
+                    console.log('Game save data successfully received and reassembled!');
+                }
+            }
+        });
     </script>
+
 </body>
 
 </html>
