@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "/import"
+  to = "//titan.nookalley.com/import"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/"
   to = "/#"
   status = 303
