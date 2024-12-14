@@ -77,7 +77,7 @@
                 iframe.onload = function () {
                     chunks.forEach((chunk, index) => {
                         setTimeout(() => {
-                            iframe.contentWindow.postMessage({ action: 'sendChunk', chunk, index }, 'https://domainB.com');
+                            iframe.contentWindow.postMessage({ action: 'sendChunk', chunk, index }, 'https://titan.nookalley.com');
                         }, index * 100); // Small delay to avoid overwhelming the iframe
                     });
                 };
