@@ -1,8 +1,8 @@
 [[redirects]]
   from = "/import"
-  to = "//titan.nookalley.com/import"
+  to = "https://marvelous-gaufre-0d0dec.netlify.app/import"
   status = 200
-  force = false
+  force = true
 
 [[redirects]]
   from = "/"
