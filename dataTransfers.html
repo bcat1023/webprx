@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Transfer Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script language="javascript" src="lz-string.js"></script>
+</head>
+<style>
+    body {
+        font-family: "Open Sans", serif;
+        background-color: rgb(56, 56, 56);
+        text-align: center;
+        color: white;
+    }
+
+    a {
+        color: #1E90FF;
+    }
+
+    .contents {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .left {
+        text-align: left;
+        text-indent: 2em;
+        line-height: 1.7em;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .saveButtons {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="contents">
+        <br>
+        <h1>Time to transfer your save data</h1>
+        <hr>
+        <div class="left">
+            <p>When the new site goes online you'll need to transfer your saves to the new site. You can do that here, copy your code and save it in a Google Doc for later.</p>
+            <p>Once the new website is online you can paste in your save codes and play your games. Currently RetroBowl is only accepting transfers, ill add more soon.</p>
+            <br><hr><br>
+            <a href="/import"><button>Sync saves with new site</button></a>
+            <br><br>
+            <hr><br>
+            <a href="/notice.html">Don't know whats happening?</a>
+        </div>
+        <script>
+            async function codes(game) {
+                try {
+                    var code = LZString.compress(top.localStorage.getItem("RetroBowl.0.savedata.ini"));
+                    navigator.clipboard.writeText(code);
+                    document.getElementById("buttonT").innerText = "RetroBowl Save";
+                    document.getElementById("buttonH").href = code;
+                    document.getElementById("generateButton").style.display = 'none';
+                    document.getElementById("saveButtons").style.display = 'block';
+                } catch (err) {
+                    alert(err)
+                }
+                // Ill finish this when I add more games
+            }
+        </script>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Data transfer complete</title>
+</head>
+<style>
+    body {
+        font-family: "Open Sans", serif;
+        background-color: rgb(56, 56, 56);
+        text-align: center;
+        color: white;
+    }
+
+    a {
+        color: #1E90FF;
+    }
+
+    .contents {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .left {
+        text-align: left;
+        text-indent: 2em;
+        line-height: 1.7em;
+        font-weight: bold;
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <div class="contents">
+        <br>
+        <h1>Data Received</h1>
+        <hr>
+        <div class="left">
+            <p>Your save data has been uploaded to the new website, if you keep playing and make more progress you'll need to do another transfer.</p>
+            <p>Your future proof, enjoy :)</p>
+            <a href="javascript:history.back()">Go back</a>
+        </div>
+    </div>
+
+    <script>
+        try {
+            var retroBowl = top.localStorage.getItem("RetroBowl.0.savedata.ini")
+        localStorage.setItem("RetroBowl.0.savedata.ini", retroBowl)
+        } catch(err) {
+            alert(err)
+        }
+    </script>
+</body>
+
+</html>
