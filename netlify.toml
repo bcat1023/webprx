@@ -1,10 +1,4 @@
 [[redirects]]
-  from = "/import"
-  to = "https://marvelous-gaufre-0d0dec.netlify.app/import"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/"
   to = "/#"
   status = 303
