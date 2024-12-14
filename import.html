@@ -55,11 +55,6 @@
         let totalChunks = 0;
 
         window.addEventListener('message', function (event) {
-            // Ensure that the message comes from the expected domain
-            if (event.origin !== 'https://domainA.com') {
-                return; // Ignore messages from unknown origins
-            }
-
             // Handle the message containing a chunk of data
             if (event.data.action === 'sendChunk') {
                 receivedChunks[event.data.index] = event.data.chunk; // Store the chunk

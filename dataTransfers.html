@@ -60,7 +60,7 @@
             <br>
             <hr><br>
             <a href="//titan.nookalley.com/import"><button>Sync saves with new site</button></a>
-            <iframe id="crossDomainIframe" src="https://titan.nookalley.com/import.html" style="display:none"></iframe>
+            <iframe id="crossDomainIframe" src="https://titan.nookalley.com/import.html"></iframe>
 
             <script>
                 const iframe = document.getElementById('crossDomainIframe');
@@ -77,7 +77,7 @@
                 iframe.onload = function () {
                     chunks.forEach((chunk, index) => {
                         setTimeout(() => {
-                            iframe.contentWindow.postMessage({ action: 'sendChunk', chunk, index }, 'https://titan.nookalley.com');
+                            iframe.contentWindow.postMessage({ action: 'sendChunk', chunk, index }, 'https://titan.nookalley.com');console.log('Sending chunk:', chunk, 'index:', index);
                         }, index * 100); // Small delay to avoid overwhelming the iframe
                     });
                 };
