@@ -77,7 +77,7 @@
                 iframe.onload = function () {
                     chunks.forEach((chunk, index) => {
                         setTimeout(() => {
-                            iframe.contentWindow.postMessage({ action: 'sendChunk', chunk, index }, 'https://titan.nookalley.com');console.log('Sending chunk:', chunk, 'index:', index);
+                            iframe.contentWindow.postMessage({ action: 'sendChunk', chunk, index }, 'https://titan.nookalley.com/import');console.log('Sending chunk:', chunk, 'index:', index);
                         }, index * 100); // Small delay to avoid overwhelming the iframe
                     });
                 };
