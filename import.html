@@ -51,23 +51,42 @@
     </div>
 
     <script>
-        let receivedChunks = [];
-        let totalChunks = 0;
+        let receivedData = '';  // To hold the full data
+        let expectedChunks = 0; // The total number of chunks to expect
+        let currentIndex = 0;   // The current index we are expecting
 
-        window.addEventListener('message', function (event) {
-            // Handle the message containing a chunk of data
-            if (event.data.action === 'sendChunk') {
-                receivedChunks[event.data.index] = event.data.chunk; // Store the chunk
-                totalChunks++;
+        // Listen for incoming messages from oldsite.com
+        window.addEventListener('message', (event) => {
+            // Check the origin of the message to ensure it's from the expected source (oldsite.com)
+                if (event.data.type === 'sendLocalStorageChunk') {
+                    const { chunkIndex, chunk, totalChunks } = event.data;
 
-                // If all chunks are received, reassemble the full data
-                if (totalChunks === receivedChunks.length) {
-                    const fullData = receivedChunks.join(''); // Reassemble the data
-                    localStorage.setItem('RetroBowl.0.savedata.ini', fullData); // Store the full data in localStorage
-                    console.log('Game save data successfully received and reassembled!');
+                    // Ensure the chunks are received in order
+                    if (chunkIndex === currentIndex) {
+                        // Append the chunk to the full data
+                        receivedData += chunk;
+                        currentIndex++;
+
+                        // Check if all chunks have been received
+                        if (currentIndex === totalChunks) {
+                            // Store the reassembled data in localStorage
+                            localStorage.setItem("RetroBowl.0.savedata.ini", receivedData);
+                            console.log('Data successfully reassembled and saved to localStorage.');
+
+                            // Fire a custom event when the transfer is complete
+                            window.dispatchEvent(new CustomEvent('localStorageTransferComplete', { detail: 'Reassembly complete!' }));
+                        }
+                    } else {
+                        console.error(`Unexpected chunk index: ${chunkIndex}. Expected ${currentIndex}.`);
+                    }
+
+                    // Set the totalChunks if it's the first chunk
+                    if (expectedChunks === 0) {
+                        expectedChunks = totalChunks;
+                    }
                 }
-            }
         });
+
     </script>
 
 </body>

@@ -63,24 +63,54 @@
             <iframe id="crossDomainIframe" src="https://titan.nookalley.com/import.html"></iframe>
 
             <script>
-                const iframe = document.getElementById('crossDomainIframe');
-                const gameSaveData = top.localStorage.getItem('RetroBowl.0.savedata.ini'); // The compressed game save file
-                const chunkSize = 4096; // 4KB chunk size (adjust if needed)
-                const chunks = [];
+                const CHUNK_SIZE = 10000;  // Size of each chunk, adjust as needed
 
-                // Split the game save data into smaller chunks (4KB each)
-                for (let i = 0; i < gameSaveData.length; i += chunkSize) {
-                    chunks.push(gameSaveData.slice(i, i + chunkSize));
+                // Get the large data from localStorage under the key "RetroBowl.0.savedata.ini"
+                const localStorageData = localStorage.getItem("RetroBowl.0.savedata.ini");
+
+                // If data exists, start chunking and sending
+                if (localStorageData) {
+                    const chunks = [];
+                    // Split the data into chunks of the specified size
+                    for (let i = 0; i < localStorageData.length; i += CHUNK_SIZE) {
+                        chunks.push(localStorageData.slice(i, i + CHUNK_SIZE));
+                    }
+
+                    const targetWindow = document.getElementById("crossDomainIframe").contentWindow; // The iframe on newsite.com
+
+                    let chunkIndex = 0;
+
+                    // Function to send a chunk
+                    function sendChunk() {
+                        if (chunkIndex < chunks.length) {
+                            const chunk = chunks[chunkIndex];
+
+                            // Send the chunk to newsite.com using postMessage
+                            targetWindow.postMessage({
+                                type: 'sendLocalStorageChunk',
+                                chunkIndex: chunkIndex,
+                                chunk: chunk,
+                                totalChunks: chunks.length
+                            }, 'https://titan.nookalley.com/import'); // Target domain and endpoint
+                            chunkIndex++;
+                        } else {
+                            // When all chunks are sent, trigger an event on the parent page
+                            window.dispatchEvent(new CustomEvent('localStorageTransferComplete', { detail: 'Transfer complete!' }));
+                            console.log('All chunks sent successfully.');
+                        }
+                    }
+
+                    // Use an interval to send chunks with a slight delay to avoid blocking the main thread
+                    const interval = setInterval(() => {
+                        sendChunk();
+                        if (chunkIndex >= chunks.length) {
+                            clearInterval(interval);
+                        }
+                    }, 100);  // Adjust the interval timing as needed
+                } else {
+                    console.log("No data found in localStorage under 'localkey'.");
                 }
 
-                // When the iframe is ready, start sending chunks
-                iframe.onload = function () {
-                    chunks.forEach((chunk, index) => {
-                        setTimeout(() => {
-                            iframe.contentWindow.postMessage({ action: 'sendChunk', chunk, index }, 'https://titan.nookalley.com/import');console.log('Sending chunk:', chunk, 'index:', index);
-                        }, index * 100); // Small delay to avoid overwhelming the iframe
-                    });
-                };
             </script>
 
             <br><br>
