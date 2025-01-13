@@ -39,15 +39,6 @@ function borger() {
   }
 }
 
-function prxmox(toggle) {
-  var frame = document.getElementById('prx')
-  if (toggle == 1) {
-    frame.src = "/p/home";
-  } else {
-    frame.src = "about:blank"
-  }
-}
-
 function openPage(evt, tab) {
   loafshow()
   // Declare all variables
