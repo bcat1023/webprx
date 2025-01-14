@@ -72,7 +72,7 @@ setTimeout(() => {
 
 function tick1() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Surf freely is down until further notice"
+    document.getElementById('tick').innerText = "Surf freely will probably not be coming any time soon"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -83,7 +83,7 @@ function tick1() {
 
 function tick2() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Retrobowl is now out, more games to come soon..."
+    document.getElementById('tick').innerText = "Now that Nook Alley is finished, ill have time to work on Titan Network"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -94,7 +94,7 @@ function tick2() {
 
 function tick3() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Missing a game you want? submit a game request."
+    document.getElementById('tick').innerText = "Did you know I have over 293 game requests to process?"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
