@@ -1,0 +1,1 @@
+(()=>{var o;window.self!==window.top&&window.addEventListener("keydown",(function(w){o[w.code]&&w.preventDefault()}),!(o={Space:!0,ArrowUp:!0,ArrowDown:!0,ArrowLeft:!0,ArrowRight:!0}))})();
