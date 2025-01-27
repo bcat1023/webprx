@@ -8,12 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Titan network, we got everything">
-  <script>
-    document.oncontextmenu = function () {
-      return false;
-    };
-    var games = document.getElementById('games');
-  </script>
 </head>
 
 <body id="body" style="background-image: url('/img/back.webp');" onload="loafhide()">
@@ -22,10 +16,10 @@
     <div class="navbar" id="mynavbar">
       <img class="logo" style="height:30px;margin-top: 10px;margin-left: 5px;" src="/img/active.gif">
       <a href="/" class="logo">Titan Network</a>
-      <a href="#" onclick="openPage(event, 'Now Playing');"
-        ondblclick="gframe.src = gframe.src;top.loafshow()">Currently Playing</a>
+      <a href="#" onclick="openPage(event, 'Now Playing');">Currently Playing</a>
+      <a href="#" onclick="openPage(event, 'contact');backstop(1)">Game Request</a>
       <a href="#" onclick="openPage(event, 'games');backstop(1)">Games</a>
-      <a href="#" id="indexPage" onclick="openPage(event, 'index');backstop(1)">Home</a>
+      <!--<a href="#" id="indexPage" onclick="openPage(event, 'index');backstop(1)">Home</a>-->
       <a href="#word" aria-label="Moblie-Menu" class="icon" onclick="borger()">
         <i class="fa fa-bars"></i>
       </a>
@@ -41,11 +35,8 @@
       <div class="centerh containerc">
         <h1>Titan Network</h1>
         <h4>Blocked? Use the mirror! <a href="//tinyurl.com/8081GN">tinyurl.com/8081GN</a></h4>
-        <br>
-        <a href="#" onclick="openPage(event, 'games');" class="button">Games</a>
-        <a href="#" onclick="openPage(event, 'contact')" class="button">Requests</a>
+        <p>You are looking at a public beta Titan Network</p>
         <h4><a href="//nookalley.com">powered by nookalley.com</a></h4>
-        <h4><a href="//thedrowsy.com/yourdata">Privacy Policy</a></h4>
       </div>
     </div>
     <!-- end of index-->
