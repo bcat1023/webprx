@@ -119,3 +119,11 @@ var n = document.getElementById('navbar').clientHeight
 
 function resizeGFrame() { g = g - n; console.log(g + " " + n) };
 window.onresize = resizeGFrame;
+
+// New functions
+const player = document.getElementById('player')
+function loadGame(url) {
+  top.loafshow()
+  openPage(event, 'Now Playing');
+  top.player.src = url;
+}
