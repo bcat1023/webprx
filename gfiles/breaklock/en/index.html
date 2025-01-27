@@ -3,6 +3,7 @@
   <head>
     <title>BreakLock</title>
     <meta name="description" content="A hybrid of Mastermind and the Android pattern lock. A game you gonna love to hate." />
+    <base href="/breaklock/" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -181,10 +182,12 @@
       <![endif]-->
     </noscript>
 
-    <script src="./en/app.js"></script>
+    <script src="en/app.js"></script>
     <script type="text/javascript">
       // Set up service worker
-      
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
 
       // Easter Egg to get it full black
       // Awesome for OLED screens

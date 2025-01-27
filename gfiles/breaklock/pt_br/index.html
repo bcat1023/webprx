@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <title>BreakLock</title>
-    <meta name="description" content="A hybrid of Mastermind and the Android pattern lock. A game you gonna love to hate." />
+    <meta name="description" content="Um híbrido de Mastermind e o padrão de bloqueio do Android. Um jogo que você vai amar odiar." />
+    <base href="/breaklock/" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <link rel="shortcut icon" href="assets/favicon.ico" />
     <meta name="theme-color" content="#000000" />
 
-    <link rel="manifest" href="en/manifest.json" />
+    <link rel="manifest" href="pt-br/manifest.json" />
 
     <!-- Add to home screen for Safari on iOS -->
     <link rel="apple-touch-icon" href="assets/icons/ios-180x180.png" />
@@ -51,7 +52,7 @@
     />
     <meta name="msapplication-TileColor" content="#000000" />
 
-    <link rel="stylesheet" type="text/css" href="en/app.css" />
+    <link rel="stylesheet" type="text/css" href="pt-br/app.css" />
     <style></style>
   </head>
 
@@ -95,21 +96,21 @@
           data="assets/intro.svg"
           type="image/svg+xml"
         ></object>
-        <p>Link the dots to find the lock pattern. After every attempt the game will tell you how many dots you got right.</p>
+        <p>Ligue os pontos para encontrar o padrão de bloqueio. Após cada tentativa, o jogo dirá quantos pontos você acertou.</p>
         <p></p>
         <table>
           <tr>
             <td style="width: 1.5em">&#9679;</td>
-            <td>a dot occurs in the pattern and is in the correct order</td>
+            <td>um ponto ocorre no padrão e está na ordem correta</td>
           </tr>
           <tr>
             <td>&#9675;</td>
-            <td>a dot occurs in the pattern but in the wrong order</td>
+            <td>um ponto ocorre no padrão, mas na ordem errada</td>
           </tr>
         </table>
-        <p>The difficulty setting changes the amount of dots to connect. Easy is 4 dots, medium is 5 dots and hard is 6 dots.</p>
-        <p>Good luck!_</p>
-        <p class="small">by <a href="https://twitter.com/mxwllt"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-maxwellito"></use></svg></a> / on <a href="https://github.com/maxwellito/breaklock"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use></svg></a></p>
+        <p>A configuração de dificuldade altera a quantidade de pontos a conectar. Fácil são 4 pontos, médio são 5 pontos e difícil são 6 pontos.</p>
+        <p>Boa sorte!</p>
+        <p class="small">por <a href="https://twitter.com/mxwllt"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-maxwellito"></use></svg></a> / on <a href="https://github.com/maxwellito/breaklock"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use></svg></a></p>
       </div>
     </div>
     <!-- SVG Icon definitions -->
@@ -181,10 +182,12 @@
       <![endif]-->
     </noscript>
 
-    <script src="./en/app.js"></script>
+    <script src="pt-br/app.js"></script>
     <script type="text/javascript">
       // Set up service worker
-      
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
 
       // Easter Egg to get it full black
       // Awesome for OLED screens
