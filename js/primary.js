@@ -65,7 +65,7 @@ setTimeout(() => {
 
 function tick1() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Surf freely will probably not be coming any time soon"
+    document.getElementById('tick').innerText = "Slope and Papa's Bakeria now available"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -76,7 +76,7 @@ function tick1() {
 
 function tick2() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Now that Nook Alley is finished, ill have time to work on Titan Network"
+    document.getElementById('tick').innerText = "Your looking at Titan Network v3, how is it?"
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
@@ -87,7 +87,7 @@ function tick2() {
 
 function tick3() {
   setTimeout(() => {
-    document.getElementById('tick').innerText = "Did you know I have over 293 game requests to process?"
+    document.getElementById('tick').innerText = "I have over 294 game requests to process, its going to take awhile..."
     document.getElementById('tick').style.opacity = 1
     setTimeout(() => {
       document.getElementById('tick').style.opacity = 0
