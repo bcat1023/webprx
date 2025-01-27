@@ -116,8 +116,8 @@ window.onresize = resizeGFrame;
 // New functions
 const player = document.getElementById('player')
 function loadGame(url) {
+  top.player.src = url;
+  backstop(0);
   openPage(event, 'Now Playing');
   loafshow();
-  backstop(0);
-  top.player.src = url;
 }
