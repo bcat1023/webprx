@@ -22,12 +22,6 @@ function loafshow() {
   loader.style.opacity = "1";
   loader.style.height = "";
   console.log("Loaf shown")
-  if (document.getElementById('gframe').contentWindow['background'] = 1) {
-    return
-  } else {
-    top.document.body.style.backgroundImage = 'url(/img/loader.gif)'
-    var background = 1
-  }
 }
 
 function borger() {
@@ -59,7 +53,6 @@ function openPage(evt, tab) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tab).style.display = "block";
   //evt.currentTarget.className += " active";
-  document.getElementById("loader").style.zIndex = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
   loafhide()
 }
 
@@ -123,7 +116,8 @@ window.onresize = resizeGFrame;
 // New functions
 const player = document.getElementById('player')
 function loadGame(url) {
-  top.loafshow()
   openPage(event, 'Now Playing');
+  loafshow();
+  backstop(0);
   top.player.src = url;
 }

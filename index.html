@@ -17,9 +17,8 @@
       <img class="logo" style="height:30px;margin-top: 10px;margin-left: 5px;" src="/img/active.gif">
       <a href="/" class="logo">Titan Network</a>
       <a href="#" onclick="openPage(event, 'Now Playing');">Currently Playing</a>
-      <a href="#" onclick="openPage(event, 'contact');backstop(1)">Game Request</a>
-      <a href="#" onclick="openPage(event, 'games');backstop(1)">Games</a>
-      <!--<a href="#" id="indexPage" onclick="openPage(event, 'index');backstop(1)">Home</a>-->
+      <a href="#" onclick="backstop(1);openPage(event, 'contact');">Game Request</a>
+      <a href="#" onclick="backstop(1);openPage(event, 'games');">Games</a>
       <a href="#word" aria-label="Moblie-Menu" class="icon" onclick="borger()">
         <i class="fa fa-bars"></i>
       </a>
@@ -39,7 +38,6 @@
         <h4><a href="//nookalley.com">powered by nookalley.com</a></h4>
       </div>
     </div>
-    <!-- end of index-->
     <!-- games-->
     <div id="games" class="tabcontent">
       <iframe onload="loafhide()" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"

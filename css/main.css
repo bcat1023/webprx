@@ -153,10 +153,10 @@ body {
   border-radius: 100px;
   margin: 15px;
   background-color: transparent;
-  z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  z-index: 2147483647;
   bottom: 0px;
   position: fixed;
-  transition: 0.5s;
+  transition: 0.2s;
   opacity: 1;
   left: 0px;
 }
