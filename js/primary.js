@@ -97,6 +97,7 @@ function tick3() {
 }
 
 function backstop(toggle) {
+  console.log('T1')
   try {
     if (toggle == 1) {
       this.body.style.backgroundImage = 'url(/img/back.webp)'
