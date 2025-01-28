@@ -99,10 +99,10 @@ function tick3() {
 
 function backstop(toggle) {
   if (toggle == 1) {
-    top.document.body.style.backgroundImage = 'url(/img/back.webp)'
+    body.style.backgroundImage = 'url(/img/back.webp)'
     var background = 1
   } else {
-    top.document.body.style.backgroundImage = ''
+    body.style.backgroundImage = ''
     var background = `0`
   }
 }
