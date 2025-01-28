@@ -96,14 +96,17 @@ function tick3() {
   }, 1000);
 }
 
-
 function backstop(toggle) {
-  if (toggle == 1) {
-    body.style.backgroundImage = 'url(/img/back.webp)'
-    var background = 1
-  } else {
-    body.style.backgroundImage = ''
-    var background = `0`
+  try {
+    if (toggle == 1) {
+      this.body.style.backgroundImage = 'url(/img/back.webp)'
+      var background = 1
+    } else {
+      this.body.style.backgroundImage = ''
+      var background = `0`
+    }
+  } catch(e) {
+    console.error(e)
   }
 }
 
