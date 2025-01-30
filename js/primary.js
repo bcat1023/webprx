@@ -96,14 +96,15 @@ function tick3() {
   }, 1000);
 }
 
+var body = document.getElementById('body')
 function backstop(toggle) {
   console.log('T1')
   try {
     if (toggle == 1) {
-      this.body.style.backgroundImage = 'url(/img/back.webp)'
+      body.style.backgroundImage = 'url(/img/back.webp)'
       var background = 1
     } else {
-      this.body.style.backgroundImage = ''
+      body.style.backgroundImage = ''
       var background = `0`
     }
   } catch(e) {
