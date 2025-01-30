@@ -19,20 +19,8 @@ V3, AltConsole Enabled
             .then(response => response.text())
             .then(html => {
                 // Write the HTML to the new tab
-                newTab.document.write(` <base href="https://titan.nookalley.com/">
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Exclude <a> tags from being affected by the <base> tag
-      const links = document.querySelectorAll('a');
-      links.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && !href.startsWith('http') && !href.startsWith('https') && !href.startsWith('//')) {
-          // Preserve relative links as they are
-          link.setAttribute('href', href);
-        }
-      });
-    });
-  </script>` + html);
+                var inject = '';
+                newTab.document.write(inject + html);
 
                 // Now execute the JavaScript code from the fetched page
                 // Create a script element

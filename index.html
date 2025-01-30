@@ -23,6 +23,20 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
+    <base href="https://example.com/">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Exclude <a> tags from being affected by the <base> tag
+      const links = document.querySelectorAll('a');
+      links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('http') && !href.startsWith('https') && !href.startsWith('//')) {
+          // Preserve relative links as they are
+          link.setAttribute('href', href);
+        }
+      });
+    });
+  </script>
   </header>
   <main>
     <!-- Tab content -->
