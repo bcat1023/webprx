@@ -33,3 +33,8 @@ from = "/netlify.toml"
 to = "/index.html"
 status = 401
 force = true
+
+[[headers]]
+  for = "/index.html"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
