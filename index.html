@@ -26,16 +26,19 @@
     <base href="https://titan.nookalley.com/">
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Exclude <a> tags from being affected by the <base> tag
+      // Adjust <a> tags to ignore <base> tag and use original relative paths
       const links = document.querySelectorAll('a');
+      
       links.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && !href.startsWith('http') && !href.startsWith('https') && !href.startsWith('//')) {
-          // Preserve relative links as they are
-          link.setAttribute('href', href);
+        const originalHref = link.getAttribute('href');
+        
+        // Only adjust if it's a relative path
+        if (originalHref && !originalHref.startsWith('http') && !originalHref.startsWith('https') && !originalHref.startsWith('//')) {
+          link.setAttribute('href', originalHref);  // Remove base URL effect
         }
       });
     });
+
   </script>
   </header>
   <main>
