@@ -1,6 +1,5 @@
 [[headers]]
+  # API Access for the countdown site
   for = "/*"
-  [headers.values]
-    access-control-allow-origin = "*"
-    access-control-allow-methods = "GET"
-    access-control-allow-headers = "Content-Type"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
