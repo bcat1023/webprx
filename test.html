@@ -15,7 +15,7 @@ V3, AltConsole Enabled
         newTab.document.open();
 
         // Fetch the index.html from the external site (replace with your desired URL)
-        fetch('https://titan.nookalley.com')
+        fetch('https://679ac8ee7379c90008996cf0--drowsygtnin.netlify.app/')
             .then(response => response.text())
             .then(html => {
                 // Write the HTML to the new tab
@@ -37,7 +37,7 @@ V3, AltConsole Enabled
                 // Close the document to finalize the page setup
                 newTab.document.close();
             })
-            .catch(err => console.error('Error loading:', err));
+            .catch(err => alert('Error loading:', err));
     };
 
 </script>
