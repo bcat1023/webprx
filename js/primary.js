@@ -126,3 +126,6 @@ function loadGame(url) {
   openPage(event, 'Now Playing');
   loafshow();
 }
+function handleLinkClick(event) {
+  event.preventDefault();
+}
