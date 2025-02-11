@@ -107,7 +107,7 @@ function backstop(toggle) {
       body.style.backgroundImage = ''
       var background = `0`
     }
-  } catch(e) {
+  } catch (e) {
     console.error(e)
   }
 }
