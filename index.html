@@ -15,15 +15,14 @@
     <img class="loaf" alt="loading-icon" id="loader" src=" ./img/loader.gif">
     <div class="navbar" id="mynavbar">
       <img class="logo" style="height:30px;margin-top: 10px;margin-left: 5px;" src="/img/active.gif">
-      <a href="/" class="logo">Titan Network</a>
-      <a href="#" onclick="openPage(event, 'Now Playing');">Currently Playing</a>
-      <a href="#" onclick="backstop(1);openPage(event, 'contact');">Game Request</a>
-      <a href="#" onclick="backstop(1);openPage(event, 'games');">Games</a>
-      <a href="#word" aria-label="Moblie-Menu" class="icon" onclick="borger()">
+      <a onclick="window.location.reload()" class="logo">Titan Network</a>
+      <a onclick="openPage(event, 'Now Playing');">Currently Playing</a>
+      <a onclick="backstop(1);openPage(event, 'contact');">Game Request</a>
+      <a onclick="backstop(1);openPage(event, 'games');">Games</a>
+      <a aria-label="Moblie-Menu" class="icon" onclick="borger()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    <base href="https://titan.nookalley.com/">
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Adjust <a> tags to ignore <base> tag and use original relative paths
